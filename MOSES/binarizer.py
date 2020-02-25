@@ -54,7 +54,5 @@ class BinarizationFactory:
     def get_binarizer(self, name):
         if name == 'QuantileBinarizer':
             return QuantileBinarizer()
-        if name == 'BooleanBinarizer':
-            return BooleanBinarizer()
         else:
             raise Exception('Unable to instantiate an Binarizer Object for {}'.format(name))
