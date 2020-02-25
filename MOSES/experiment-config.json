@@ -1,0 +1,14 @@
+{
+        "inputFeatures":[
+		{"name": "Name1"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name2"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name3"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name4"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name5"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name6"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name7"," bins":[8], "Binarizer": "QuantileBinarizer"},
+		{"name": "Name8"," bins":[8], "Binarizer": "QuantileBinarizer"}
+        ],
+	"targetFeature": "TargetFeatureName",
+	"LA_years": [1,2,3,4,5,6,7]
+}
