@@ -58,3 +58,20 @@ class BinarizationFactory:
             return QuantileBinarizer()
         else:
             raise Exception('Unable to instantiate an Binarizer Object for {}'.format(name))
+
+
+def test_binarize():
+    xdf = pds.DataFrame({'nums': [i for i in range(0,11)]})
+    binarizer = QuantileBinarizer()
+    result = binarizer.binarize(xdf['nums'].to_numpy(), 2)
+    assert( result[0] == [1,0])
+    assert( result[6] == [0,1])
+    assert( result[7] == [0,1])
+    result = binarizer.binarize(xdf['nums'].to_numpy(), 5)
+    assert( result[0] == [1,0,0,0,0])
+    assert( result[4] == [0,1,0,0,0])
+    assert( result[9] == [0,0,0,0,1])
+
+
+if __name__ == '__main__':
+    test_binarize()
