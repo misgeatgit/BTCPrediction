@@ -101,7 +101,7 @@ def main():
        with open(args.config[0], 'r') as jsonf:
            config = json.load(jsonf)
 
-       logging.basicConfig(filename='transformer.log', level=logging.WARNING)
+       logging.basicConfig(filename='transformer.log', level=logging.INFO)
 
        list_of_feat_bin_matrix = binarize(data, config)
        list_of_bin_matrix = combine_all(list_of_feat_bin_matrix)
@@ -112,23 +112,36 @@ def main():
        target = config['targetFeature']
        predictions = binarize_target(data[target].to_numpy(), config['LA_years'])
        # Resize Input to Length(Input) - K for K look-ahead years prediction and merge.
+       moses_data = {}
        for la_years in predictions.keys():
-           vec = predictions[la_years]
            for i in range(len(list_of_bin_matrix)):
-               list_of_bin_matrix[i].drop(list_of_bin_matrix[i].tail(la_years).index,inplace=True)
-               target_feat_bin_vec = pds.DataFrame({target:vec})
-               assert(list_of_bin_matrix[i].shape[0] == target_feat_bin_vec.shape[0])
+               logging.info('LA_years: {}\n'.format(la_years))
+               logging.info('inputFeature bin_matrix initial size: {}'.format(list_of_bin_matrix[i].shape))
+               df = list_of_bin_matrix[i].drop(list_of_bin_matrix[i].tail(la_years).index,inplace=False)
+               target_feat_bin_vec = pds.DataFrame({target:predictions[la_years]})
+               logging.info('inputFeature bin_matrix size after resize: {}'.format(df.shape))
+               logging.info('targetFeature bin_matrix initial size: {} \n'.format(target_feat_bin_vec.shape))
+               assert(df.shape[0] == target_feat_bin_vec.shape[0])
                # merge Input MAtrix and Output Vec
-               list_of_bin_matrix[i] = pds.merge(list_of_bin_matrix[i],\
+               moses_df = pds.merge(df,\
                        target_feat_bin_vec, left_index = True,\
                        right_index = True)
+               if la_years in moses_data.keys():
+                   moses_data[la_years].append(moses_df)
+               else:
+                   moses_data[la_years] = [moses_df]
+
        #TODO use informative naming
-       cnt = 0
-       for bin_matrix in list_of_bin_matrix:
-            saving_dir = '{}/exp_{}'.format(dump_dir,cnt)
-            os.mkdir(saving_dir)
-            file_name = saving_dir + '/data.moses'
-            bin_matrix.to_csv(file_name, sep=' ', index=False)
+       for la_years in moses_data.keys():
+           cnt = 0
+           saving_dir = '{}/LA_{}'.format(dump_dir,la_years)
+           os.mkdir(saving_dir)
+           for moses_df in moses_data[la_years]:
+                saving_child_dir = '{}/binarization_{}'.format(saving_dir, cnt)
+                cnt += 1
+                os.mkdir(saving_child_dir)
+                file_name = saving_child_dir + '/data.moses'
+                moses_df.to_csv(file_name, sep=' ', index=False)
     else:
         parser.print_help()
 
