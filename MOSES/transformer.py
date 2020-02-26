@@ -1,5 +1,8 @@
 from binarizer import BinarizationFactory
 import argparse
+import json
+import logging
+import os
 import numpy as np
 import pandas as pds
 
@@ -9,40 +12,48 @@ def binarize(data, config):
       Returns a set of binarized DataFrames for each inputFeatures.
     '''
     input_feat_config = config['inputFeatures']
+    logging.info('Config:\n{}'.format(input_feat_config))
     feat_binarized_DFs = {}
+    logging.info('Binarizing')
     for  dct in input_feat_config:
         feat_name = dct['name']
         bins_to_try = dct['bins']
-        binarizer = BinarizationFactory(dct['binarizer']).get_binarizer()
-
+        binarizer = BinarizationFactory().get_binarizer(dct['binarizer'])
+        logging.info('Feat: {} Bins: {}'.format(feat_name, bins_to_try))
         binarizations = []
-        for bins in bin_to_try:
+        for bins in bins_to_try:
             bin_matrix = binarizer.binarize(data[feat_name].to_numpy(), bins)
             # build dataFrame
             df_columns = {}
             for i in range(bins):
                 df_columns[feat_name+'_bin'+str(i)] = np.array(bin_matrix)[:,i]
             binarizations.append(pds.DataFrame(df_columns))
-
+        logging.info('Result:\n{}'.format(binarizations))
         feat_binarized_DFs[feat_name] = binarizations
 
-    return feat_binarizations
+    return feat_binarized_DFs
 
-def binarize_target(target_vec, config):
-    la_years = config['LA_years']
-    bin_vecs = []
+def binarize_target(target_vec, la_years):
+    '''
+     UP vs DOWN/NEURTRAL binarizer.
+    '''
+    feat_bin_vec_dict = {}
     for la_year in la_years:
         bin_vec = []
         for i in range(len(target_vec) - la_year):
             if target_vec[i] < target_vec[i+la_year]:
                 bin_vec.append(1) # UP
             else:
-                bin_vec.append(0) # DOWN
-        bin_vecs.append({la_year: bin_vec})
+                bin_vec.append(0) # DOWN OR NEUTRAL
+        feat_bin_vec_dict[la_year] = bin_vec
 
-    return bin_vecs
+    return feat_bin_vec_dict
 
 def _cartesian(elements_set):
+    '''
+    Returns a list of the cartesian product given a list
+    of sets of objects. eg. input: [[a,b], [c]] output: [[a,c], [b,c]]
+    '''
     result = []
     if len(elements_set) == 0:
         return result
@@ -83,37 +94,43 @@ def main():
     args = parser.parse_args()
 
     if args.input and args.dump_dir and args.config:
-       dump_dir = args.dump_dir[0]
+       dump_dir =  os.path.abspath(os.path.expanduser(args.dump_dir[0])) #expanduser for tilde expansion
        data = pds.read_csv(args.input[0])
        # Load config file
        config = None
        with open(args.config[0], 'r') as jsonf:
            config = json.load(jsonf)
 
+       logging.basicConfig(filename='transformer.log', level=logging.WARNING)
+
        list_of_feat_bin_matrix = binarize(data, config)
        list_of_bin_matrix = combine_all(list_of_feat_bin_matrix)
-       predictions = binarize_target(data[config['target']].to_numpy(), config[predict])
 
-       for layears in predictions.keys():
-           look_ahead = layears
-           vec = prediction[layears]
-           for i in range(list_of_bin_matrix):
-               bin_vec = list_of_bin_matrix[i]
-               list_of_bin_matrix[i] = bin_vec.drop(bin_vec.tail(look_ahead).index,inplace=True)
-               target_feat_bin_vec = pds.DataFrame({config['target']:vec})
-               assert(list_of_bin_matrix[i].shape[0] == target_feat_bin_vec[0])
+       for matrix in list_of_bin_matrix:
+           logging.info('{}\n'.format(matrix))
+
+       target = config['targetFeature']
+       predictions = binarize_target(data[target].to_numpy(), config['LA_years'])
+       # Resize Input to Length(Input) - K for K look-ahead years prediction and merge.
+       for la_years in predictions.keys():
+           vec = predictions[la_years]
+           for i in range(len(list_of_bin_matrix)):
+               list_of_bin_matrix[i].drop(list_of_bin_matrix[i].tail(la_years).index,inplace=True)
+               target_feat_bin_vec = pds.DataFrame({target:vec})
+               assert(list_of_bin_matrix[i].shape[0] == target_feat_bin_vec.shape[0])
+               # merge Input MAtrix and Output Vec
                list_of_bin_matrix[i] = pds.merge(list_of_bin_matrix[i],\
-                       target_feat_bin_matrix, left_index = True,\
+                       target_feat_bin_vec, left_index = True,\
                        right_index = True)
-       # dump TODO
-       # for bin_matrix in list_of_bin_matrix:
-            # dir = MAKE_UP_SOME_DIR
-            # bin_matrix.to_csv(dum_dir+'/'+dir, sep=' ', index=False)
+       #TODO use informative naming
+       cnt = 0
+       for bin_matrix in list_of_bin_matrix:
+            saving_dir = '{}/exp_{}'.format(dump_dir,cnt)
+            os.mkdir(saving_dir)
+            file_name = saving_dir + '/data.moses'
+            bin_matrix.to_csv(file_name, sep=' ', index=False)
     else:
         parser.print_help()
 
-
-# configuration
-# {FeatureName: [{bins:Bins, binarizer: Binarizer, names:[..]}], target:FeatureName, predict:[1...]}
 if __name__ == '__main__':
     main()
