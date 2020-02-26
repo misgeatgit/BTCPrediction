@@ -1,14 +1,17 @@
 {
         "inputFeatures":[
-		{"name": "Name1"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name2"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name3"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name4"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name5"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name6"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name7"," bins":[8], "Binarizer": "QuantileBinarizer"},
-		{"name": "Name8"," bins":[8], "Binarizer": "QuantileBinarizer"}
+		{"name": "MarketCap", "bins":[8],"binarizer":"QuantileBinarizer"},
+		{"name": "BlockSize", "bins":[8],"binarizer":"QuantileBinarizer"},
+		{"name": "GoldPrice", "bins":[8],"binarizer":"QuantileBinarizer"},
+		{"name": "GTrends", "bins":[8],"binarizer":"QuantileBinarizer"},
+		{"name": "HashRate", "bins":[8],"binarizer":"QuantileBinarizer"},
+		{"name": "MempoolCount", "bins":[8],"binarizer": "QuantileBinarizer"},
+		{"name": "MempoolSize", "bins":[8],"binarizer": "QuantileBinarizer"},
+		{"name": "MinningDifficulty", "bins":[8],"binarizer": "QuantileBinarizer"},
+		{"name": "TransactionPerDay", "bins":[8],"binarizer": "QuantileBinarizer"},
+		{"name": "TransactionFee", "bins":[8],"binarizer": "QuantileBinarizer"},
+		{"name": "TransactionVolume_USD", "bins":[8], "binarizer": "QuantileBinarizer"}
         ],
-	"targetFeature": "TargetFeatureName",
-	"LA_years": [1,2,3,4,5,6,7]
+	"targetFeature": "Price",
+	"LA_years": [1]
 }
