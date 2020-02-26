@@ -27,19 +27,21 @@ class QuantileBinarizer(Binarizer):
        '''
        #TODO check input_vec is a real number vector and numpy array
        quantiles = []
-       for i in range(1, bins-1):
-           quantiles.append(np.quantile(input_vec, float(i)/(bins-1)))
-
+       for i in range(1, bins):
+           quantiles.append(np.quantile(input_vec, float(i)/(bins)))
+       #print('InputVec: {}'.format(input_vec))
+       #print('Bins: {}'.format(bins))
+       #print('Quantiles: {}'.format(quantiles))
        binary_matrix = []
        for x in input_vec:
            bit_array = [0] * bins
            # TODO use binary search instead.
-           for i in range(quantiles):
+           for i in range(len(quantiles)):
                if x <= quantiles[i]:
                    bit_array[i] = 1
                    break
                if i == len(quantiles) - 1 and x > quantiles[i]:
-                   bit_array[i] = 1
+                   bit_array[i+1] = 1
            if 1 not in bit_array:
                raise Exception('There should be a 1 in the bit array.')
            binary_matrix.append(bit_array)
