@@ -1,4 +1,5 @@
 from binarizer import BinarizationFactory
+from target_binarizer import binarize_target 
 import argparse
 import json
 import logging
@@ -32,22 +33,6 @@ def binarize(data, config):
         feat_binarized_DFs[feat_name] = binarizations
 
     return feat_binarized_DFs
-
-def binarize_target(target_vec, la_years):
-    '''
-     UP vs DOWN/NEURTRAL binarizer.
-    '''
-    feat_bin_vec_dict = {}
-    for la_year in la_years:
-        bin_vec = []
-        for i in range(len(target_vec) - la_year):
-            if target_vec[i] < target_vec[i+la_year]:
-                bin_vec.append(1) # UP
-            else:
-                bin_vec.append(0) # DOWN OR NEUTRAL
-        feat_bin_vec_dict[la_year] = bin_vec
-
-    return feat_bin_vec_dict
 
 def _cartesian(elements_set):
     '''
@@ -110,15 +95,15 @@ def main():
            logging.info('{}\n'.format(matrix))
 
        target = config['targetFeature']
-       predictions = binarize_target(data[target].to_numpy(), config['LA_years'])
+       predictions = binarize_target(data[target].to_numpy(), config['LA_days'])
        # Resize Input to Length(Input) - K for K look-ahead years prediction and merge.
        moses_data = {}
-       for la_years in predictions.keys():
+       for la_days in predictions.keys():
            for i in range(len(list_of_bin_matrix)):
-               logging.info('LA_years: {}\n'.format(la_years))
+               logging.info('LA_years: {}\n'.format(la_days))
                logging.info('inputFeature bin_matrix initial size: {}'.format(list_of_bin_matrix[i].shape))
-               df = list_of_bin_matrix[i].drop(list_of_bin_matrix[i].tail(la_years).index,inplace=False)
-               target_feat_bin_vec = pds.DataFrame({target:predictions[la_years]})
+               df = list_of_bin_matrix[i].drop(list_of_bin_matrix[i].tail(la_days).index,inplace=False)
+               target_feat_bin_vec = pds.DataFrame({target:predictions[la_days]})
                logging.info('inputFeature bin_matrix size after resize: {}'.format(df.shape))
                logging.info('targetFeature bin_matrix initial size: {} \n'.format(target_feat_bin_vec.shape))
                assert(df.shape[0] == target_feat_bin_vec.shape[0])
@@ -126,21 +111,21 @@ def main():
                moses_df = pds.merge(df,\
                        target_feat_bin_vec, left_index = True,\
                        right_index = True)
-               if la_years in moses_data.keys():
-                   moses_data[la_years].append(moses_df)
+               if la_days in moses_data.keys():
+                   moses_data[la_days].append(moses_df)
                else:
-                   moses_data[la_years] = [moses_df]
+                   moses_data[la_days] = [moses_df]
 
        #TODO use informative naming
-       for la_years in moses_data.keys():
+       for la_days in moses_data.keys():
            cnt = 0
-           saving_dir = '{}/LA_{}'.format(dump_dir,la_years)
+           saving_dir = '{}/LA_{}'.format(dump_dir,la_days)
            os.mkdir(saving_dir)
-           for moses_df in moses_data[la_years]:
+           for moses_df in moses_data[la_days]:
                 saving_child_dir = '{}/binarization_{}'.format(saving_dir, cnt)
                 cnt += 1
                 os.mkdir(saving_child_dir)
-                file_name = saving_child_dir + '/data.moses'
+                file_name = saving_child_dir + '/data.csv'
                 moses_df.to_csv(file_name, sep=' ', index=False)
     else:
         parser.print_help()
