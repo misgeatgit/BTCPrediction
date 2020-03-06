@@ -1,0 +1,1 @@
+paste -d',' coinMarketCap.csv block_size.csv gold_price.csv gtrends.csv hash_rate.csv mempool_count.csv mempool_size.csv minning_difficulty.csv total_transactions.csv transactions_per_day.csv > Data.csv
