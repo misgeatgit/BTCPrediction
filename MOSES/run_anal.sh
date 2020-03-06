@@ -35,11 +35,14 @@ for exp_on_lookahead in `ls $exp_dir`; do
 			# Run MOSES on the training data
 			combof=$exp_dir/$exp_on_lookahead/$exp_on_target/combo.txt
 			echo 'Running MOSESE on '$csv
-			moses -H it -u $OUT -W1  -i \
+			elapsed_time="$(time (moses -H pre -q 0.3 -w 0.8  -u $OUT -W1  -i \
 				$train_file \
-				--diversity-autoscale=1 --diversity-pressure=0.0 \
-				--complexity-ratio=0 --complexity-temperature=5 \
-				> $combof
+				-m 30000 \
+				--fs-score pre \
+				--enable-fs=1 --fs-target-size=12 --fs-algo simple \
+				--complexity-ratio=50 \
+				> $combof) 2>&1 1>/dev/null )"
+			echo "MOSES TOOK $elapsed_time"
 			echo 'Done running MOSES now Running anal.py'
 			# Run performance measurement tool script.
 			python anal_exp.py -t exp_test.csv -T exp_train.csv \
