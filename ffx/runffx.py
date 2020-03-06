@@ -11,12 +11,12 @@ def plot_prediction_vs_actual(yhat, y, starting_year, file_name, title=''):
         assert(len(years) == yhat.shape[0] == y.shape[0])
         fig = plt.figure()
         ax = plt.subplot(111)
-        ax.plot(years, yhat, 'ro', label='Predicted')
-        ax.plot(years, y, 'bo', label='Actual')
+        ax.plot(years, yhat, label='Predicted')
+        ax.plot(years, y, label='Actual')
         # round to nearest years.
         ax.format_xdata = mdates.DateFormatter('%Y')
-        ax.set_ylabel('Anomaly (1901-200 Base Period)')
-        ax.set_xlabel('Year')
+        ax.set_ylabel('BTC Daily Price (USD)')
+        ax.set_xlabel('Days')
         ax.legend()
         plt.rcParams['axes.titlepad'] = 20
         plt.rcParams["axes.titlesize"] = 8
@@ -47,11 +47,10 @@ predictors = ['MarketCap','BlockSize','GoldPrice','GTrends','HashRate',
 
 # Predict K years ahead
 #Ks = [0,1,2,3,4,5,6,7,8,10,9]
-Ks = range(1,31)#[15,16,17,18,19,20]
-Ks = [1]
+Ks = range(1,8)#[15,16,17,18,19,20]
 results = {'years_predicted': [], 'test_data_size': [], 'SquaredSumError': [],\
         'MeanAbsError':[], 'RMSError':[], 'Model': []}
-data_starting_year = 1880
+data_starting_year = 0
 for K in Ks:
     print('\nModels Predicting {} years ahead:'.format(K))
     # Remove the last K year data from as the Y value is unknown
@@ -109,8 +108,8 @@ for K in Ks:
     #y = np.reshape(test_Y, test_Y.shape[0])
     yhat = model.simulate(cur_test_X)
     y = np.reshape(cur_test_Y, cur_test_Y.shape[0])
-    plot_prediction_vs_actual(yhat, y, test_starting_year, 'predict_{}_years.png'.format(K),\
-            'Predicted years={}'.format(K))
+    plot_prediction_vs_actual(yhat, y, test_starting_year, 'predict_{}_days.png'.format(K),\
+            'Look ahead days={}'.format(K))
     '''
     FFX = ffx.FFXRegressor()
     FFX.fit(cur_train_X, cur_train_Y)
