@@ -63,8 +63,8 @@ def calc_performance(predicted, actual):
                 tn += 1.0
             else:
                 fn += 1.0
-
-    return {'precision':tp/(tp + fp), \
+    print('TRUE POSITIVE: {}\nTRUE NEGATIVE: {}\nFALSE POSITIVE: {}\nFALSE NEGATIVE: {}'.format(tp, tn, fp, fn))
+    return {'precision':tp/(tp + fp) if tp+fp != 0 else -1, \
             'recall':tp/(tp + fn), \
             'accuracy':(tp + tn)/(tp + tn + fp + fn), \
             'balanced_accuracy':(tp/(tp + fn) + tn/(tn + fp))/2
@@ -96,7 +96,7 @@ if __name__ == "__main__":
 		combofp_dir = os.path.split(moses_resf)[0]
 		programs = extract_programs(moses_resf)
                 i = 0
-                perf_metrix_str = 'training_recall,training_accuracy,test_recall,test_accuracy,program\n'
+                perf_metrix_str = 'training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program\n'
                 suffix = ''
                 exp_result_dir = ''
                 for program in programs:
@@ -110,9 +110,10 @@ if __name__ == "__main__":
                     # Run eval-table
 		    eval_output(os.path.join(trtstdir,mtrainfname), combof, mtrain_evalf)
 		    eval_output(os.path.join(trtstdir,mtestfname), combof, mtest_evalf)
-
+                    print("TRAINING METRICS:")
                     ptr = calc_performance(values_of_col(mtrain_evalf, OUT), \
                             values_of_col(os.path.join(trtstdir,mtrainfname), OUT))
+                    print("TEST METRICS:")
                     ptst = calc_performance(values_of_col(mtest_evalf, OUT), \
                             values_of_col(os.path.join(trtstdir,mtestfname), OUT))
 
@@ -120,9 +121,9 @@ if __name__ == "__main__":
                     exp = os.path.split(trtstdir)
                     pdir = os.path.split(exp[0])[1]
 	            combo = program
-                    line = '{},{},{},{},{}\n'.format(round(ptr['recall'],2),\
-                            round(ptr['accuracy'],2),round(ptst['recall'],2),\
-                            round(ptst['accuracy'],2),combo)
+                    line = '{},{},{},{},{},{},{}'.format(round(ptr['recall'],2),\
+                            round(ptr['accuracy'],2),round(ptr['precision'],2),round(ptst['recall'],2),\
+                            round(ptst['accuracy'],2),round(ptst['precision'],2),combo)
                     # Append to result
                     perf_metrix_str += line
                 result_f = '{}/metrics.csv'.format(trtstdir)
