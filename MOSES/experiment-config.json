@@ -1,17 +1,18 @@
 {
         "inputFeatures":[
-		{"name": "MarketCap", "bins":[8],"binarizer":"QuantileBinarizer"},
-		{"name": "BlockSize", "bins":[8],"binarizer":"QuantileBinarizer"},
-		{"name": "GoldPrice", "bins":[8],"binarizer":"QuantileBinarizer"},
-		{"name": "GTrends", "bins":[8],"binarizer":"QuantileBinarizer"},
-		{"name": "HashRate", "bins":[8],"binarizer":"QuantileBinarizer"},
-		{"name": "MempoolCount", "bins":[8],"binarizer": "QuantileBinarizer"},
-		{"name": "MempoolSize", "bins":[8],"binarizer": "QuantileBinarizer"},
-		{"name": "MinningDifficulty", "bins":[8],"binarizer": "QuantileBinarizer"},
-		{"name": "TransactionPerDay", "bins":[8],"binarizer": "QuantileBinarizer"},
-		{"name": "TransactionFee", "bins":[8],"binarizer": "QuantileBinarizer"},
-		{"name": "TransactionVolume_USD", "bins":[8], "binarizer": "QuantileBinarizer"}
+		{"name": "MarketCap", "bins":[2,3,5],"binarizer":"QuantileBinarizer"},
+		{"name": "BlockSize", "bins":[10],"binarizer":"QuantileBinarizer"},
+		{"name": "GoldPrice", "bins":[2,5,7],"binarizer":"QuantileBinarizer"},
+		{"name": "GTrends", "bins":[2,5,7],"binarizer":"QuantileBinarizer"},
+		{"name": "HashRate", "bins":[10],"binarizer":"QuantileBinarizer"},
+		{"name": "MempoolCount", "bins":[10],"binarizer": "QuantileBinarizer"},
+		{"name": "MempoolSize", "bins":[10],"binarizer": "QuantileBinarizer"},
+		{"name": "MinningDifficulty", "bins":[10],"binarizer": "QuantileBinarizer"},
+		{"name": "TransactionPerDay", "bins":[10],"binarizer": "QuantileBinarizer"},
+		{"name": "TransactionFee", "bins":[2,5,7],"binarizer": "QuantileBinarizer"},
+		{"name": "TransactionVolume_USD", "bins":[2,5,7], "binarizer": "QuantileBinarizer"}
         ],
 	"targetFeature": "Price",
-	"LA_years": [1]
+	"targetBinarization":"TopNvsOthers",
+	"LA_days": [2]
 }
