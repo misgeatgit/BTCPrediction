@@ -1,7 +1,9 @@
 import pandas as pds
 import os
 import sys
+import subprocess
 from anal_exp import eval_output, calc_performance, values_of_col
+
 '''
 A script for applying voting algorithm over the top_5_pre*.csv file
 found in this directory.
@@ -41,37 +43,62 @@ for model_expdir in top_5_moses_models:
     with open(cfile, 'w') as f:
         f.write(model_expdir[0])
 
-        ofile = tmpdir+'/'+stri(i)+'_train.out'
-        print('evaluating output with COMBO: {},\n TRAIN: {}\n OUT:{}'.\
-          format(cfile, train_file, ofile))
-        eval_output(train_file, cfile, ofile)
+    ofile = tmpdir+'/'+str(i)+'_train.out'
+    #print('evaluating output with COMBO: {},\n TRAIN: {}\n OUT:{}'.\
+    #format(cfile, train_file, ofile))
+    eval_output(train_file, cfile, ofile)
 
-        ofile2 = tmpdir+'/'+stri(i)+'_test.out'
-        print('evaluating output with COMBO: {},\n TRAIN: {}\n OUT:{}'.\
-          format(cfile, test_file, ofile2))
-        eval_output(train_file, cfile, ofile2)
+    ofile2 = tmpdir+'/'+str(i)+'_test.out'
+    #print('evaluating output with COMBO: {},\n TEST: {}\n OUT:{}'.\
+    #format(cfile, test_file, ofile2))
+    eval_output(test_file, cfile, ofile2)
 
-        i += 1
-
+    i += 1
 
 # create a DF as a concatination of the outputs from each model
 dfs_train = []
-for j in range(i):
-    df = pds.read_csv(tmpdir+'/'+str(i)+'_train.out')
+for j in range(1,i):
+    outf = tmpdir+'/'+str(j)+'_train.out'
+    #print('Output file: {}'.format(outf))
+    df = pds.read_csv(outf)
+    #print('Train eval output size: {}'.format(df.shape[0]))
     df.rename(columns={"Price": 'Model_'+str(j)})
-    dfs.append(df)
+    dfs_train.append(df)
 
-df_train = pds.concat(dfs_train, ignore_index=True)
-vote= df_train.sum(axis=1).to_list()
+#print('Actual train size: {}'.format(len(actual_train)))
+df_train = pds.concat(dfs_train, axis=1, ignore_index=True)
 
-df_train['vote'] = [ 1 if v >=4 else 0 for  v in vote]
+vote_train = df_train.sum(axis=1).to_list()
+#print('Vote size: {}'.format(len(vote_train)))
+df_train['vote'] = [ 1 if v >=4 else 0 for  v in vote_train]
+df_train['actual'] = actual_train
+df_train.to_csv('vote_train.csv', sep=',', index=False)
+train_perf = calc_performance(vote_train, actual_train)
 
-df_train['actual'] = actual
+dfs_test = []
+for j in range(1,i):
+    outf = tmpdir+'/'+str(j)+'_test.out'
+    #print('Output file: {}'.format(outf))
+    df = pds.read_csv(outf)
+    #print('Test eval output size: {}'.format(df.shape[0]))
+    df.rename(columns={"Price": 'Model_'+str(j)})
+    dfs_test.append(df)
 
-df_train.to_csv('vote.csv', sep=',', index=False)
+#print('Actual test size: {}'.format(len(actual_test)))
+df_test = pds.concat(dfs_test, axis=1, ignore_index=True)
 
+vote_test = df_test.sum(axis=1).to_list()
+#print('Vote size: {}'.format(len(vote_test)))
+df_test['vote'] = [ 1 if v >=4 else 0 for  v in vote_test]
+df_test['actual'] = actual_test
+df_test.to_csv('vote_test.csv', sep=',', index=False)
+test_perf = calc_performance(vote_test, actual_test)
 
+#print('Voting based prediction results:')
+print('training_accuracy, training_precision, test_accuracy, test_precision')
+print('{}, {}, {}, {}'.format(train_perf['accuracy'], train_perf['precision'], test_perf['accuracy'], test_perf['precision']))
 
+os.system('rm -r '+tmpdir)
 
 
 
