@@ -29,13 +29,18 @@ for LA_exp in LA_exp_dirs:
         csvf_rel_path =  exp_dir + '/metrics.csv'
         # start ranking by precision here.
         # TODO use heap instead of sorting. 5x faster.
+        #print('Working with {}'.format(csvf))
         df_prec = pds.read_csv(csvf).sort_values(by='test_precision', ascending=False)
+        for i in range(df_prec.shape[0]):
+            df_prec['experiment_dir'] = path
         if len(top_5_max_prec) < 5:
             top_5_max_prec.append([df_prec, csvf_rel_path])
         else:
-            top_5_max_prec.sort(key=lambda s: s[0].sort_values\
-                    (by='training_precision',
-                     ascending=False)['training_precision'][0], reverse=True)
+            for df_path in top_5_max_prec:
+                df_path[0].sort_values(by='training_precision', inplace=True,\
+                                 ascending=False)
+            top_5_max_prec.sort(key=lambda s: s[0]['training_precision'][0],\
+                                reverse=True)
             least = top_5_max_prec.pop()
             if df_prec['training_precision'][0] > least[0]['training_precision'][0]:
                 top_5_max_prec.append([df_prec, csvf_rel_path])
@@ -43,12 +48,16 @@ for LA_exp in LA_exp_dirs:
                 top_5_max_prec.append(least)
 
         df_acc = pds.read_csv(csvf).sort_values(by='test_accuracy', ascending=False)
+        for i in range(df_acc.shape[0]):
+            df_acc['experiment_dir'] = path
         if len(top_5_max_acc) < 5:
             top_5_max_acc.append([df_acc, csvf_rel_path])
         else:
-            top_5_max_acc.sort(key=lambda s: s[0].sort_values\
-                    (by='training_accuracy',
-                     ascending=False)['training_accuracy'][0], reverse=True)
+            for df_path in top_5_max_acc:
+                df_path[0].sort_values(by='training_accuracy', inplace=True,\
+                                       ascending=False)
+            top_5_max_acc.sort(key=lambda s: s[0]['training_accuracy'][0],\
+                               reverse=True)
             least = top_5_max_acc.pop()
             if df_acc['training_accuracy'][0] > least[0]['training_accuracy'][0]:
                 top_5_max_acc.append([df_acc, csvf_rel_path])
