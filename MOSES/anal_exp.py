@@ -59,13 +59,13 @@ def calc_performance(predicted, actual):
     tp = tn = fp = fn = 0.0       #tp - true positive tn -true negative fp - false positive fn -false negative
     assert(len(predicted) == len(actual))
     for i in range(0, len(predicted)):
-        if predicted[i] == '1':
-            if actual[i] == '1':
+        if str(predicted[i]) == '1':
+            if str(actual[i]) == '1':
                 tp += 1.0
             else:
                 fp += 1.0
         else:
-            if actual[i] == '0':
+            if str(actual[i]) == '0':
                 tn += 1.0
             else:
                 fn += 1.0
