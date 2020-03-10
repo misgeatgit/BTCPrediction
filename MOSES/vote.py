@@ -70,10 +70,11 @@ df_train = pds.concat(dfs_train, axis=1, ignore_index=True)
 
 vote_train = df_train.sum(axis=1).to_list()
 #print('Vote size: {}'.format(len(vote_train)))
-df_train['vote'] = [ 1 if v >=4 else 0 for  v in vote_train]
+df_train['vote'] = [ 1 if v >=3 else 0 for  v in vote_train]
 df_train['actual'] = actual_train
 df_train.to_csv('vote_train.csv', sep=',', index=False)
-train_perf = calc_performance(vote_train, actual_train)
+print('Measures on train:')
+train_perf = calc_performance(df_train['vote'], actual_train)
 
 dfs_test = []
 for j in range(1,i):
@@ -86,13 +87,15 @@ for j in range(1,i):
 
 #print('Actual test size: {}'.format(len(actual_test)))
 df_test = pds.concat(dfs_test, axis=1, ignore_index=True)
-
+#print(df_test)
 vote_test = df_test.sum(axis=1).to_list()
 #print('Vote size: {}'.format(len(vote_test)))
-df_test['vote'] = [ 1 if v >=4 else 0 for  v in vote_test]
+df_test['vote'] = [ 1 if v >=3 else 0 for  v in vote_test]
 df_test['actual'] = actual_test
+#print(df_test)
 df_test.to_csv('vote_test.csv', sep=',', index=False)
-test_perf = calc_performance(vote_test, actual_test)
+print('Measures on test:')
+test_perf = calc_performance(df_test['vote'], actual_test)
 
 #print('Voting based prediction results:')
 print('training_accuracy, training_precision, test_accuracy, test_precision')
