@@ -23,6 +23,7 @@ top_5_moses_models= []
 for i in range(5):
     df = top_5_metrics_df['program'][10*i]
     path = top_5_metrics_df['experiment_dir'][10*i]
+    print('INFO: Selected:\n{} \n{}'.format(df, path))
     top_5_moses_models.append((df, path))
 
 tmpdir = 'models-to-vote-on'
@@ -37,8 +38,10 @@ for model_expdir in top_5_moses_models:
     test_file = model_expdir[1] + '/exp_test.csv'
     # store once
     if not actual_train and not actual_test:
-        actual_train = values_of_col(train_file, 'Price', ' ')
-        actual_test = values_of_col(test_file, 'Price', ' ')
+        #actual_train = values_of_col(train_file, 'Price', ' ')
+        actual_train = pds.read_csv(train_file, sep=' ')['Price'].to_list()
+        #actual_test = values_of_col(test_file, 'Price', ' ')
+        actual_test = pds.read_csv(test_file, sep=' ')['Price'].to_list()
 
     with open(cfile, 'w') as f:
         f.write(model_expdir[0])
@@ -65,11 +68,12 @@ for j in range(1,i):
     df.rename(columns={"Price": 'Model_'+str(j)})
     dfs_train.append(df)
 
-#print('Actual train size: {}'.format(len(actual_train)))
+print('Actual train size: {}'.format(len(actual_train)))
 df_train = pds.concat(dfs_train, axis=1, ignore_index=True)
 
 vote_train = df_train.sum(axis=1).to_list()
-#print('Vote size: {}'.format(len(vote_train)))
+df_train['vote_count'] = vote_train
+print('Vote size: {}'.format(len(vote_train)))
 df_train['vote'] = [ 1 if v >=3 else 0 for  v in vote_train]
 df_train['actual'] = actual_train
 df_train.to_csv('vote_train.csv', sep=',', index=False)
@@ -85,11 +89,12 @@ for j in range(1,i):
     df.rename(columns={"Price": 'Model_'+str(j)})
     dfs_test.append(df)
 
-#print('Actual test size: {}'.format(len(actual_test)))
+print('Actual test size: {}'.format(len(actual_test)))
 df_test = pds.concat(dfs_test, axis=1, ignore_index=True)
 #print(df_test)
 vote_test = df_test.sum(axis=1).to_list()
-#print('Vote size: {}'.format(len(vote_test)))
+df_test['vote_count'] = vote_test
+print('Vote size: {}'.format(len(vote_test)))
 df_test['vote'] = [ 1 if v >=3 else 0 for  v in vote_test]
 df_test['actual'] = actual_test
 #print(df_test)
@@ -98,8 +103,13 @@ print('Measures on test:')
 test_perf = calc_performance(df_test['vote'], actual_test)
 
 #print('Voting based prediction results:')
-print('training_accuracy, training_precision, test_accuracy, test_precision')
-print('{}, {}, {}, {}'.format(train_perf['accuracy'], train_perf['precision'], test_perf['accuracy'], test_perf['precision']))
+header = 'training_accuracy, training_precision, test_accuracy, test_precision'
+print(header)
+values = '{}, {}, {}, {}'.format(train_perf['accuracy'], train_perf['precision'], test_perf['accuracy'], test_perf['precision'])
+print(values)
+
+with open('voting_results.csv', 'a+') as f:
+    f.write(metrics_dir+'\n'+header+'\n'+values+'\n')
 
 os.system('rm -r '+tmpdir)
 
