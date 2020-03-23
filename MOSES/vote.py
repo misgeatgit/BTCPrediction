@@ -5,26 +5,28 @@ import subprocess
 from anal_exp import eval_output, calc_performance, values_of_col
 
 '''
-A script for applying voting algorithm over the top_5_pre*.csv file
+A script for applying voting algorithm over the top_N_pre*.csv file
 found in this directory.
 '''
 
 metrics_dir = sys.argv[1]
+N = int(sys.argv[2])
+THRESHOLD = float(sys.argv[3])
 
 if not metrics_dir:
     print('You need to provide the LA* directory path')
     exit()
 
-top_5_metrics_df = pds.read_csv(metrics_dir +'/top_5_prec_metrics.csv')
+top_N_metrics_df = pds.read_csv(metrics_dir +'/top_'+str(N)+'_prec_metrics.csv')
 
 # Each group of 10 models belong to one MOSES run. So pick M 10*i for i in moses_runs
 
-top_5_moses_models= []
-for i in range(5):
-    df = top_5_metrics_df['program'][10*i]
-    path = top_5_metrics_df['experiment_dir'][10*i]
+top_N_moses_models= []
+for i in range(N):
+    df = top_N_metrics_df['program'][10*i]
+    path = top_N_metrics_df['experiment_dir'][10*i]
     print('INFO: Selected:\n{} \n{}'.format(df, path))
-    top_5_moses_models.append((df, path))
+    top_N_moses_models.append((df, path))
 
 tmpdir = 'models-to-vote-on'
 os.mkdir(tmpdir)
@@ -32,7 +34,7 @@ os.mkdir(tmpdir)
 i = 1
 actual_train = []
 actual_test = []
-for model_expdir in top_5_moses_models:
+for model_expdir in top_N_moses_models:
     cfile = tmpdir+'/'+str(i)+'.combo'
     train_file = model_expdir[1] + '/exp_train.csv'
     test_file = model_expdir[1] + '/exp_test.csv'
@@ -74,7 +76,7 @@ df_train = pds.concat(dfs_train, axis=1, ignore_index=True)
 vote_train = df_train.sum(axis=1).to_list()
 df_train['vote_count'] = vote_train
 print('Vote size: {}'.format(len(vote_train)))
-df_train['vote'] = [ 1 if v >=3 else 0 for  v in vote_train]
+df_train['vote'] = [ 1 if v >=int(THRESHOLD * N) else 0 for  v in vote_train]
 df_train['actual'] = actual_train
 df_train.to_csv('vote_train.csv', sep=',', index=False)
 print('Measures on train:')
@@ -95,7 +97,7 @@ df_test = pds.concat(dfs_test, axis=1, ignore_index=True)
 vote_test = df_test.sum(axis=1).to_list()
 df_test['vote_count'] = vote_test
 print('Vote size: {}'.format(len(vote_test)))
-df_test['vote'] = [ 1 if v >=3 else 0 for  v in vote_test]
+df_test['vote'] = [ 1 if v >= int(THRESHOLD * N) else 0 for  v in vote_test]
 df_test['actual'] = actual_test
 #print(df_test)
 df_test.to_csv('vote_test.csv', sep=',', index=False)
