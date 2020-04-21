@@ -25,7 +25,7 @@ config_template_main = {
         ],
 	"targetFeature": "Price",
 	"targetBinarization":"TopNvsOthers",
-	"LA_days": [2]
+	"LA_days": []
 }
 
 LA_exp_dirs = os.listdir(root_dir)
@@ -40,28 +40,16 @@ for LA_exp in LA_exp_dirs:
     for index, row in df.iterrows():
         config_template = copy.deepcopy(config_template_main)
         file_str = row['top_acc_file']
-        MarketCapBins = re.compile('MarketCapBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][0]['bins'].append(MarketCapBins)
-        BlockSizeBins = re.compile('BlockSizeBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][1]['bins'].append(BlockSizeBins)
-        GoldPriceBins = re.compile('GoldPriceBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][2]['bins'].append(GoldPriceBins)
-        GTrendsBins = re.compile('GTrendsBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][3]['bins'].append(GTrendsBins)
-        HashRateBins = re.compile('HashRateBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][4]['bins'].append(HashRateBins)
-        MempoolCountBins = re.compile('MempoolCountBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][5]['bins'].append(MempoolCountBins)
-        MempoolSizeBins = re.compile('MempoolSizeBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][6]['bins'].append(MempoolSizeBins)
-        MinningDifficultyBins = re.compile('MinningDifficultyBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][7]['bins'].append(MinningDifficultyBins)
-        TransactionPerDayBins = re.compile('TransactionPerDayBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][8]['bins'].append(TransactionPerDayBins)
-        TransactionFeeBins = re.compile('TransactionFeeBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][9]['bins'].append(TransactionFeeBins)
-        TransactionVolume_USDBins = re.compile('TransactionVolume_USDBins([0-9]*)').findall(file_str)[0]
-        config_template['inputFeatures'][10]['bins'].append(TransactionVolume_USDBins)
+        features=['MarketCapBins', 'BlockSizeBins', 'GoldPriceBins', \
+                'GTrendsBins', 'HashRateBins', 'MempoolCountBins',\
+                'MempoolSizeBins', 'MinningDifficultyBins',\
+                'TransactionPerDayBins','TransactionFeeBins',\
+                'TransactionVolume_USDBins']
+        LA = re.compile('LA_([0-9]*)').findall(LA_exp)[0]
+        config_template['LA_days'].append(int(LA))
+        for i, feat in enumerate(features, start=0):
+            bins = re.compile('{}([0-9]*)'.format(feat)).findall(file_str)[0]
+            config_template['inputFeatures'][i]['bins'].append(int(bins))
         #random test
         print('SIZE {}'.format(len(config_template['inputFeatures'][8]['bins'])))
         assert(len(config_template['inputFeatures'][8]['bins']) == 1)
