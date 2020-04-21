@@ -1,0 +1,8 @@
+
+- Generate N train-test data for each LA
+for each tra-test dir in LA_i:
+    for each exp_config of LA_i # i E {1..10}
+	creat_dir entailing the binarization
+	run moses
+        rank using all.
+        vote
