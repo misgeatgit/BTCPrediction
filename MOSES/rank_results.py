@@ -10,7 +10,7 @@ for each Look Ahead experiment.
 '''
 root_dir = os.path.abspath(sys.argv[1])
 LA_exp_dirs = os.listdir(root_dir)
-
+N = int(sys.argv[2])
 for LA_exp in LA_exp_dirs:
     LA_exp_path = root_dir + '/'+ LA_exp 
     if not os.path.isdir(LA_exp_path):
@@ -18,8 +18,8 @@ for LA_exp in LA_exp_dirs:
     print('Ranking in {}'.format(LA_exp))
     max_prec_df = None
     max_acc_df = None
-    top_5_max_prec = []
-    top_5_max_acc = []
+    top_N_max_prec = []
+    top_N_max_acc = []
     path_info = {'top_prec_file':[], 'top_acc_file':[]}
     for exp_dir in os.listdir(LA_exp_path):
         path = LA_exp_path + '/' + exp_dir
@@ -33,51 +33,51 @@ for LA_exp in LA_exp_dirs:
         df_prec = pds.read_csv(csvf).sort_values(by='test_precision', ascending=False)
         for i in range(df_prec.shape[0]):
             df_prec['experiment_dir'] = path
-        if len(top_5_max_prec) < 5:
-            top_5_max_prec.append([df_prec, csvf_rel_path])
+        if len(top_N_max_prec) < N:
+            top_N_max_prec.append([df_prec, csvf_rel_path])
         else:
-            for df_path in top_5_max_prec:
+            for df_path in top_N_max_prec:
                 df_path[0].sort_values(by='training_precision', inplace=True,\
                                  ascending=False)
-            top_5_max_prec.sort(key=lambda s: s[0]['training_precision'][0],\
+            top_N_max_prec.sort(key=lambda s: s[0]['training_precision'][0],\
                                 reverse=True)
-            least = top_5_max_prec.pop()
+            least = top_N_max_prec.pop()
             if df_prec['training_precision'][0] > least[0]['training_precision'][0]:
-                top_5_max_prec.append([df_prec, csvf_rel_path])
+                top_N_max_prec.append([df_prec, csvf_rel_path])
             else:
-                top_5_max_prec.append(least)
+                top_N_max_prec.append(least)
 
         df_acc = pds.read_csv(csvf).sort_values(by='test_accuracy', ascending=False)
         for i in range(df_acc.shape[0]):
             df_acc['experiment_dir'] = path
-        if len(top_5_max_acc) < 5:
-            top_5_max_acc.append([df_acc, csvf_rel_path])
+        if len(top_N_max_acc) < N:
+            top_N_max_acc.append([df_acc, csvf_rel_path])
         else:
-            for df_path in top_5_max_acc:
+            for df_path in top_N_max_acc:
                 df_path[0].sort_values(by='training_accuracy', inplace=True,\
                                        ascending=False)
-            top_5_max_acc.sort(key=lambda s: s[0]['training_accuracy'][0],\
+            top_N_max_acc.sort(key=lambda s: s[0]['training_accuracy'][0],\
                                reverse=True)
-            least = top_5_max_acc.pop()
+            least = top_N_max_acc.pop()
             if df_acc['training_accuracy'][0] > least[0]['training_accuracy'][0]:
-                top_5_max_acc.append([df_acc, csvf_rel_path])
+                top_N_max_acc.append([df_acc, csvf_rel_path])
             else:
-                top_5_max_acc.append(least)
+                top_N_max_acc.append(least)
 
-    #TODO merge those top5 DataFrames
-    print('Top accurate on training count: {}'.format(len(top_5_max_acc)))
-    print('Top precise on training count: {}'.format(len(top_5_max_prec)))
+    #TODO merge those topN DataFrames
+    print('Top accurate on training count: {}'.format(len(top_N_max_acc)))
+    print('Top precise on training count: {}'.format(len(top_N_max_prec)))
 
-    for i in range(5):
-        path_info['top_prec_file'].append(top_5_max_prec[i][1])
-        path_info['top_acc_file'].append(top_5_max_acc[i][1])
-    pds.DataFrame(path_info).to_csv(LA_exp_path+'/top_5_metrics_file_paths.csv', sep=',', index=False)
+    for i in range(N):
+        path_info['top_prec_file'].append(top_N_max_prec[i][1])
+        path_info['top_acc_file'].append(top_N_max_acc[i][1])
+    pds.DataFrame(path_info).to_csv(LA_exp_path+'/top_'+str(N)+'_metrics_file_paths.csv', sep=',', index=False)
 
-    max_prec_df = pds.concat([s[0] for s in top_5_max_prec], ignore_index=True)
-    max_acc_df = pds.concat([s[0] for s in top_5_max_acc], ignore_index=True)
+    max_prec_df = pds.concat([s[0] for s in top_N_max_prec], ignore_index=True)
+    max_acc_df = pds.concat([s[0] for s in top_N_max_acc], ignore_index=True)
 
-    max_prec_df.to_csv(LA_exp_path+'/top_5_prec_metrics.csv',sep=',', index=False)
-    max_acc_df.to_csv(LA_exp_path+'/top_5_acc_metrics.csv',sep=',', index=False)
+    max_prec_df.to_csv(LA_exp_path+'/top_'+str(N)+'_prec_metrics.csv',sep=',', index=False)
+    max_acc_df.to_csv(LA_exp_path+'/top_'+str(N)+'_acc_metrics.csv',sep=',', index=False)
 
 
 
