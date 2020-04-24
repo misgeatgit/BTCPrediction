@@ -4,6 +4,7 @@ import sys
 import subprocess
 from anal_exp import eval_output, calc_performance, values_of_col
 import click
+from shutil import rmtree
 
 '''
 A script for applying voting algorithm over the top_N_pre*.csv file
@@ -34,7 +35,9 @@ def main(metrics_dir, vote_size, threshold, ranked_on):
         print('INFO: Selected:\n{} \n{}'.format(df, path))
         top_N_moses_models.append((df, path))
 
-    tmpdir = 'models-to-vote-on'
+    tmpdir = '/tmp/models-to-vote-on'
+    if os.path.exists(tmpdir):
+        rmtree(tmpdir)
     os.mkdir(tmpdir)
 
     i = 1
@@ -43,11 +46,18 @@ def main(metrics_dir, vote_size, threshold, ranked_on):
     for model_expdir in top_N_moses_models:
         cfile = tmpdir+'/'+str(i)+'.combo'
         train_file = model_expdir[1] + '/exp_train.csv'
+        print('TrainFile: '+train_file)
         test_file = model_expdir[1] + '/exp_test.csv'
+        print('TestFile: '+test_file)
         # store once
         if not actual_train and not actual_test:
-            actual_train = pds.read_csv(train_file, sep=' ')['Price'].to_list()
-            actual_test = pds.read_csv(test_file, sep=' ')['Price'].to_list()
+            try:
+                actual_train = pds.read_csv(train_file, sep=' ')['Price'].to_list()
+                actual_test = pds.read_csv(test_file, sep=' ')['Price'].to_list()
+            except:
+                with open('erraneous_exps.txt', 'a+') as log:
+                    log.write(train_file)
+                    log.write(test_file)
 
         with open(cfile, 'w') as f:
             f.write(model_expdir[0])
@@ -101,8 +111,8 @@ def main(metrics_dir, vote_size, threshold, ranked_on):
     result = {'training_accuracy':[round(train_perf['accuracy'],2)], 'training_precision':[round(train_perf['precision'],2)],
                'test_accuracy':[round(test_perf['accuracy'],2)], 'test_precision':[round(test_perf['precision'],2)]}
 
-    pds.DataFrame(result).to_csv(metrics_dir+'/voting_result.csv', sep=',', index=False)
-    os.system('rm -r '+tmpdir)
+    pds.DataFrame(result).to_csv(metrics_dir+'/voting_result_based_on_'+rank_type+'.csv', sep=',', index=False)
+    rmtree(tmpdir)
 
 if __name__ == '__main__':
     main()
