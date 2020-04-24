@@ -1,0 +1,1 @@
+and(!$GoldPrice_bin2 !$GoldPrice_bin4 !$MempoolCount_bin5 !$MinningDifficulty_bin5 !$TransactionVolume_USD_bin3) 

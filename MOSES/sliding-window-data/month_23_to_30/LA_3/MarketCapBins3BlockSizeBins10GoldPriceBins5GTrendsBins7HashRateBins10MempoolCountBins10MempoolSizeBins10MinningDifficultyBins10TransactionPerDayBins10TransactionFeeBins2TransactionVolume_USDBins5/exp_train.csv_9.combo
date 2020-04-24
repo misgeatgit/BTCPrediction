@@ -1,0 +1,1 @@
+or(and(or($MempoolSize_bin7 !$TransactionVolume_USD_bin2) !$GTrends_bin1 $TransactionPerDay_bin7) $MarketCap_bin0) 

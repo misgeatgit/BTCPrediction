@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.59,0.77,0.77,0.75,0.8,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) !$TransactionFee_bin0) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.59,0.78,0.8,0.75,0.8,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) and(!$BlockSize_bin4 !$TransactionFee_bin0)) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.59,0.77,0.79,0.75,0.8,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) !$TransactionFee_bin0) !$HashRate_bin4 !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.61,0.78,0.81,0.75,0.8,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) and(!$BlockSize_bin4 !$TransactionFee_bin0) $GoldPrice_bin3) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.61,0.78,0.81,0.75,0.8,0.94,or(and(or(and(or(!$MarketCap_bin1 $GoldPrice_bin3) !$GoldPrice_bin1) and(!$BlockSize_bin4 !$TransactionFee_bin0)) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.59,0.76,0.76,0.8,0.83,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) !$TransactionFee_bin0) !$HashRate_bin4 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.61,0.77,0.78,0.75,0.8,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) $GoldPrice_bin3 !$TransactionFee_bin0) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.61,0.77,0.78,0.75,0.8,0.94,or(and(or(and(or(!$MarketCap_bin1 $GoldPrice_bin3) !$GoldPrice_bin1) !$TransactionFee_bin0) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.59,0.77,0.77,0.75,0.8,0.94,or(and(or(and(!$MarketCap_bin1 !$GoldPrice_bin1) !$TransactionFee_bin0 $TransactionFee_bin1) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 
+0.59,0.77,0.77,0.75,0.8,0.94,or(and(or(and(or(!$MarketCap_bin1 $TransactionFee_bin1) !$GoldPrice_bin1) !$TransactionFee_bin0) !$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) $MinningDifficulty_bin4) 

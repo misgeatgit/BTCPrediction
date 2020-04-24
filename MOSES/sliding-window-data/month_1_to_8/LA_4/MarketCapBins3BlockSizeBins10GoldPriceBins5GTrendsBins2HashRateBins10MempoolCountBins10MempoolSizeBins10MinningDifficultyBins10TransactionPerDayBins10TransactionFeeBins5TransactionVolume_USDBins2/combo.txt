@@ -1,0 +1,10 @@
+0.854545474052429199 and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $MinningDifficulty_bin3 $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0) !$HashRate_bin2) 
+0.785714328289031982 and(or(and(!$MinningDifficulty_bin2 !$TransactionFee_bin0) $TransactionVolume_USD_bin1) !$GTrends_bin0) 
+0.86206895112991333 and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $HashRate_bin5 $MinningDifficulty_bin3 $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0) !$HashRate_bin2) 
+0.71951216459274292 !$GTrends_bin0 
+0.854545474052429199 and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $MinningDifficulty_bin3 $MinningDifficulty_bin8 $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0) !$HashRate_bin2) 
+0.813559293746948242 and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $HashRate_bin5 $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0)) 
+0.792452812194824219 and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0)) 
+0.771929800510406494 and(or(!$TransactionFee_bin0 $TransactionVolume_USD_bin1) !$GTrends_bin0 !$MinningDifficulty_bin8) 
+0.806451618671417236 and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $MinningDifficulty_bin3 $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0)) 
+0.806451618671417236 or(and(or(and(!$MinningDifficulty_bin0 $TransactionFee_bin2) $TransactionVolume_USD_bin1) or(!$GTrends_bin0 $TransactionVolume_USD_bin0)) $MinningDifficulty_bin3) 

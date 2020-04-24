@@ -1,0 +1,1 @@
+and(or($MarketCap_bin0 $TransactionPerDay_bin8) !$TransactionVolume_USD_bin4) 

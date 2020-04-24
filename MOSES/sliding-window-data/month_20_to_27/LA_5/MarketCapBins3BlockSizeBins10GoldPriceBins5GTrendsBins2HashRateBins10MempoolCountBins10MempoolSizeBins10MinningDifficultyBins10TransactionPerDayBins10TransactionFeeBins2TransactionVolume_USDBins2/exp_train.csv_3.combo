@@ -1,0 +1,1 @@
+and(!$MarketCap_bin2 !$GoldPrice_bin2 !$HashRate_bin7 !$MinningDifficulty_bin4) 

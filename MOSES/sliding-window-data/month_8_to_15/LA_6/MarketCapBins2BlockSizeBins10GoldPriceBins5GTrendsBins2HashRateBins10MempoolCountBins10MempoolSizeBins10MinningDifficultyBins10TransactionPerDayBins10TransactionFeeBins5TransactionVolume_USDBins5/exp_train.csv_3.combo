@@ -1,0 +1,1 @@
+and(!$MarketCap_bin1 !$MempoolCount_bin8 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2) 

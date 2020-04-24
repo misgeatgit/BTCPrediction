@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.48,0.66,0.8,0.69,0.63,0.56,and(!$MarketCap_bin1 !$HashRate_bin5 !$MempoolCount_bin4 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.48,0.66,0.8,0.69,0.63,0.56,and(!$MarketCap_bin1 !$HashRate_bin5 !$MempoolSize_bin4 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.47,0.66,0.8,0.69,0.67,0.6,and(!$MarketCap_bin1 !$HashRate_bin5 !$MempoolCount_bin8 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.47,0.66,0.8,0.69,0.67,0.6,and(!$MarketCap_bin1 !$HashRate_bin5 !$MempoolSize_bin8 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.52,0.67,0.77,0.69,0.63,0.56,and(!$MarketCap_bin1 !$HashRate_bin5 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.5,0.68,0.81,0.77,0.6,0.53,and(or(!$MarketCap_bin1 $MempoolCount_bin5) !$HashRate_bin5 !$MempoolCount_bin4 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.5,0.68,0.81,0.77,0.6,0.53,and(or(!$MarketCap_bin1 $MempoolSize_bin5) !$HashRate_bin5 !$MempoolCount_bin4 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.5,0.68,0.81,0.69,0.63,0.56,and(or(!$MarketCap_bin1 $MempoolSize_bin8) !$HashRate_bin5 !$MempoolCount_bin4 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.5,0.66,0.77,0.69,0.67,0.6,and(!$MarketCap_bin1 !$MempoolSize_bin8 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 
+0.5,0.66,0.77,0.69,0.67,0.6,and(!$MarketCap_bin1 !$MempoolCount_bin8 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin5) 

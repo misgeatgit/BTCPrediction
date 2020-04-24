@@ -1,0 +1,1 @@
+and(or($BlockSize_bin1 !$HashRate_bin6) or($GoldPrice_bin0 $GTrends_bin6 $TransactionFee_bin4) !$GTrends_bin2) 

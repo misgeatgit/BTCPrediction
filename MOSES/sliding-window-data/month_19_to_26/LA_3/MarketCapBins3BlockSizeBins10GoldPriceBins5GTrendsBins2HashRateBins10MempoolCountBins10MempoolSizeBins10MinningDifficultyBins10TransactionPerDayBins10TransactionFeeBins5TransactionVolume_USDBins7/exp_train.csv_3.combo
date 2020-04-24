@@ -1,0 +1,1 @@
+and(or(and(!$BlockSize_bin4 !$GTrends_bin0) $BlockSize_bin9) !$BlockSize_bin0 !$TransactionPerDay_bin6) 

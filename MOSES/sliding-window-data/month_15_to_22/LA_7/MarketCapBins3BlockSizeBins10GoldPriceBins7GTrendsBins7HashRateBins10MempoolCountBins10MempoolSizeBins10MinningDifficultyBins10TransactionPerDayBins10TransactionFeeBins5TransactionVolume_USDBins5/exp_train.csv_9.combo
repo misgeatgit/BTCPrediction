@@ -1,0 +1,1 @@
+or(and(or($MarketCap_bin1 !$GoldPrice_bin4) !$GTrends_bin5 $TransactionVolume_USD_bin0) $MinningDifficulty_bin2) 

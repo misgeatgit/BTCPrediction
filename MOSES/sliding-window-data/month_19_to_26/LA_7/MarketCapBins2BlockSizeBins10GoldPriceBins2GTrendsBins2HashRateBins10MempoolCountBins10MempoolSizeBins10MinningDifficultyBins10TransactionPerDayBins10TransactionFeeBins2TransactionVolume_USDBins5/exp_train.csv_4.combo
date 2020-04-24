@@ -1,0 +1,1 @@
+and(or(and($MarketCap_bin0 !$HashRate_bin4) and(!$TransactionPerDay_bin8 $TransactionVolume_USD_bin3)) or($GoldPrice_bin1 $TransactionVolume_USD_bin4)) 

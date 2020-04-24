@@ -1,0 +1,1 @@
+and(!$MarketCap_bin2 !$BlockSize_bin3 !$GTrends_bin4 !$MempoolCount_bin3 !$MinningDifficulty_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin6) 

@@ -1,0 +1,1 @@
+and(or($MempoolCount_bin6 $MempoolSize_bin6 $TransactionPerDay_bin7 $TransactionVolume_USD_bin2) !$MempoolSize_bin5) 

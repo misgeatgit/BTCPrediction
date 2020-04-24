@@ -1,0 +1,1 @@
+and(or(!$GoldPrice_bin1 !$MinningDifficulty_bin6) or($GoldPrice_bin1 !$HashRate_bin8) !$MempoolSize_bin9 !$MinningDifficulty_bin3 !$TransactionFee_bin0) 

@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.57,0.76,0.81,0.8,0.53,0.62,and(or(and($MarketCap_bin0 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6)) !$MinningDifficulty_bin3 !$MinningDifficulty_bin7) 
+0.57,0.76,0.81,0.8,0.53,0.62,and(or(and($MarketCap_bin0 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$MinningDifficulty_bin3) 
+0.57,0.76,0.81,0.8,0.53,0.62,and(or(and($MarketCap_bin0 $MinningDifficulty_bin6) and(!$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$MarketCap_bin2 !$MinningDifficulty_bin3) 
+0.57,0.76,0.81,0.8,0.53,0.62,and(or(and(!$MarketCap_bin1 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6)) !$MinningDifficulty_bin3 !$MinningDifficulty_bin7) 
+0.57,0.76,0.81,0.8,0.53,0.62,and(or(and(!$MarketCap_bin1 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$MinningDifficulty_bin3) 
+0.57,0.76,0.81,0.8,0.53,0.62,and(or(and(!$MarketCap_bin1 $MinningDifficulty_bin6) and(!$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$MarketCap_bin2 !$MinningDifficulty_bin3) 
+0.57,0.76,0.83,0.8,0.53,0.62,and(or(and($MarketCap_bin0 !$GoldPrice_bin1 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$MinningDifficulty_bin3) 
+0.57,0.76,0.83,0.7,0.63,0.74,and(or(and($MarketCap_bin0 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$GoldPrice_bin1 !$MinningDifficulty_bin3) 
+0.57,0.76,0.83,0.7,0.63,0.74,and(or(and(!$MarketCap_bin1 $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$GoldPrice_bin1 !$MinningDifficulty_bin3) 
+0.59,0.76,0.81,0.8,0.53,0.62,and(or(and(or($MarketCap_bin0 $BlockSize_bin2) $MinningDifficulty_bin6) and(!$MarketCap_bin2 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7)) !$MinningDifficulty_bin3) 

@@ -1,0 +1,1 @@
+and(or($GTrends_bin0 $MinningDifficulty_bin7) !$MarketCap_bin0) 

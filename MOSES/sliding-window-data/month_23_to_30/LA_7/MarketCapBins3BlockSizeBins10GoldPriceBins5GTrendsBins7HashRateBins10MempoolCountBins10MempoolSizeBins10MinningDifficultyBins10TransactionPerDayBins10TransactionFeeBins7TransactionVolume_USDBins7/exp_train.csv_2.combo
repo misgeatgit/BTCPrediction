@@ -1,0 +1,1 @@
+or(and($GTrends_bin6 !$HashRate_bin0 !$HashRate_bin4) $MarketCap_bin0) 

@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.43,0.57,0.88,0.42,0.5,1.0,and(!$MarketCap_bin0 !$BlockSize_bin0 !$BlockSize_bin9 !$TransactionPerDay_bin0 !$TransactionVolume_USD_bin3) 
+0.43,0.56,0.85,0.42,0.5,1.0,and(!$MarketCap_bin0 !$BlockSize_bin0 !$BlockSize_bin9 !$TransactionVolume_USD_bin3) 
+0.45,0.59,0.88,0.42,0.5,1.0,and(or(!$MarketCap_bin0 $GoldPrice_bin2) !$BlockSize_bin0 !$BlockSize_bin9 !$TransactionPerDay_bin0 !$TransactionVolume_USD_bin3) 
+0.43,0.57,0.88,0.42,0.5,1.0,and(or($HashRate_bin1 !$TransactionPerDay_bin0) !$MarketCap_bin0 !$BlockSize_bin0 !$BlockSize_bin9 !$TransactionVolume_USD_bin3) 
+0.43,0.57,0.88,0.42,0.5,1.0,and(or(!$TransactionPerDay_bin0 $TransactionPerDay_bin5) !$MarketCap_bin0 !$BlockSize_bin0 !$BlockSize_bin9 !$TransactionVolume_USD_bin3) 
+0.39,0.53,0.82,0.73,0.73,0.95,or(and(!$GTrends_bin5 !$TransactionFee_bin0 !$TransactionVolume_USD_bin3) $GTrends_bin3) 
+0.39,0.53,0.82,0.73,0.73,0.95,or(and(!$GTrends_bin5 $TransactionFee_bin1 !$TransactionVolume_USD_bin3) $GTrends_bin3) 
+0.41,0.56,0.88,0.92,0.8,0.86,or(and(!$GTrends_bin1 !$MinningDifficulty_bin1 !$MinningDifficulty_bin3 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7 !$TransactionVolume_USD_bin1) $GTrends_bin3) 
+0.41,0.56,0.88,0.92,0.8,0.86,and(or(and(!$MinningDifficulty_bin1 !$MinningDifficulty_bin3 !$MinningDifficulty_bin6 !$MinningDifficulty_bin7 !$TransactionVolume_USD_bin1) $GTrends_bin3) !$GTrends_bin1) 
+0.37,0.52,0.81,0.54,0.6,1.0,and(!$MarketCap_bin0 !$BlockSize_bin0 !$MinningDifficulty_bin6 !$TransactionVolume_USD_bin3) 

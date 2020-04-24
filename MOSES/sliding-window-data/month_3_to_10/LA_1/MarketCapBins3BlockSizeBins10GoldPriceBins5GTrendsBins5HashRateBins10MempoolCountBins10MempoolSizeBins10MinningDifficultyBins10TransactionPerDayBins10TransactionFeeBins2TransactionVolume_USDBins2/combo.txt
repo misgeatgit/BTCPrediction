@@ -1,0 +1,10 @@
+0.790322542190551758 and(or($GoldPrice_bin0 !$TransactionFee_bin0) !$MinningDifficulty_bin8 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9) 
+0.769230782985687256 and(or($GoldPrice_bin0 !$TransactionFee_bin0) !$TransactionPerDay_bin8 !$TransactionPerDay_bin9) 
+0.72413790225982666 and(!$TransactionPerDay_bin8 !$TransactionFee_bin0) 
+0.72413790225982666 and(!$TransactionPerDay_bin8 $TransactionFee_bin1) 
+0.741176486015319824 and(or($GoldPrice_bin0 !$TransactionFee_bin0) !$TransactionPerDay_bin8) 
+0.698630154132843018 !$TransactionFee_bin0 
+0.698630154132843018 $TransactionFee_bin1 
+0.733333349227905273 and(or($MarketCap_bin2 !$TransactionFee_bin0) !$TransactionPerDay_bin8) 
+0.7118644118309021 and(!$BlockSize_bin7 !$TransactionFee_bin0) 
+0.7118644118309021 and(!$HashRate_bin7 !$TransactionFee_bin0) 

@@ -1,0 +1,1 @@
+and(or($BlockSize_bin0 !$GoldPrice_bin2 !$HashRate_bin6) !$MarketCap_bin2 !$GoldPrice_bin1 !$MinningDifficulty_bin3) 

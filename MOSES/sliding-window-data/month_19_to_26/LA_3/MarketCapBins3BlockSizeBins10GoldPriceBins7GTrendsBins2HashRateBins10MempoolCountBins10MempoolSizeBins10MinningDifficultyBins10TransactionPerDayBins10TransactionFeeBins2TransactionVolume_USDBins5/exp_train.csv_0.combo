@@ -1,0 +1,1 @@
+and(or(!$GTrends_bin0 $MempoolCount_bin6) !$BlockSize_bin0 !$TransactionPerDay_bin6) 

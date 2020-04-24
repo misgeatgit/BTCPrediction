@@ -1,0 +1,1 @@
+or(and(or($GTrends_bin3 !$MinningDifficulty_bin4) !$MempoolCount_bin9 !$TransactionFee_bin0) $MinningDifficulty_bin3) 

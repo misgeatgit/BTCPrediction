@@ -1,0 +1,1 @@
+or(and(!$GTrends_bin6 !$TransactionPerDay_bin2 $TransactionFee_bin1) $MinningDifficulty_bin2) 

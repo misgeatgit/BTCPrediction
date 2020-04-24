@@ -1,0 +1,1 @@
+and(or(and(!$MinningDifficulty_bin2 $TransactionVolume_USD_bin1) $MinningDifficulty_bin9 $TransactionVolume_USD_bin2) !$BlockSize_bin2) 

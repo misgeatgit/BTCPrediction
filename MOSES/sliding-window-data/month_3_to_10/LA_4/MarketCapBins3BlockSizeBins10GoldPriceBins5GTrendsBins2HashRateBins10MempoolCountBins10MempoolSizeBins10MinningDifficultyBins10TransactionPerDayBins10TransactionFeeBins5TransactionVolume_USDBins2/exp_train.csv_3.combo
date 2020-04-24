@@ -1,0 +1,1 @@
+and(or(!$MinningDifficulty_bin1 !$TransactionFee_bin1) or($MinningDifficulty_bin7 $TransactionVolume_USD_bin0) !$TransactionFee_bin0) 

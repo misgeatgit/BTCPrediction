@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.6,0.79,0.92,1.0,0.53,0.39,or(and(!$BlockSize_bin6 $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) 
+0.61,0.78,0.89,1.0,0.53,0.39,or(and(!$BlockSize_bin6 $GoldPrice_bin4) $MarketCap_bin0) 
+0.61,0.79,0.93,1.0,0.53,0.39,or(and(or($MarketCap_bin1 !$BlockSize_bin6) $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) 
+0.61,0.79,0.93,1.0,0.53,0.39,or(and(or(!$BlockSize_bin6 !$GTrends_bin4) $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) 
+0.61,0.79,0.93,1.0,0.53,0.39,or(and(or(!$BlockSize_bin6 $MinningDifficulty_bin7) $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) 
+0.59,0.78,0.91,1.0,0.53,0.39,or(and($GoldPrice_bin4 !$HashRate_bin3 !$HashRate_bin4) $MarketCap_bin0) 
+0.6,0.79,0.92,1.0,0.53,0.39,or(and(!$BlockSize_bin6 !$GoldPrice_bin1 $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) 
+0.6,0.79,0.92,1.0,0.53,0.39,or(and(!$BlockSize_bin6 $GoldPrice_bin4 !$HashRate_bin4 !$TransactionPerDay_bin3) $MarketCap_bin0) 
+0.6,0.79,0.92,0.56,0.4,0.26,and(or(and(!$BlockSize_bin6 $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) !$MinningDifficulty_bin7) 
+0.6,0.79,0.92,1.0,0.53,0.39,or(and(or(!$BlockSize_bin6 $GTrends_bin3) $GoldPrice_bin4 !$HashRate_bin4) $MarketCap_bin0) 

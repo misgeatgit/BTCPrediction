@@ -1,0 +1,1 @@
+and(!$MarketCap_bin2 !$MempoolSize_bin1 !$MinningDifficulty_bin5 !$TransactionPerDay_bin3) 

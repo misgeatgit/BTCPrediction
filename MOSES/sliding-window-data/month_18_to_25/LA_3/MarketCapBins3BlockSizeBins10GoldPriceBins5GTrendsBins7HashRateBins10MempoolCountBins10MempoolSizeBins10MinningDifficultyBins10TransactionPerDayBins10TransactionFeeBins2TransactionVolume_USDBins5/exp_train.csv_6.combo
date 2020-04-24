@@ -1,0 +1,1 @@
+or(and($GTrends_bin1 $TransactionVolume_USD_bin1) $GTrends_bin6 $MinningDifficulty_bin3) 

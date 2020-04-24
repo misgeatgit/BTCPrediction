@@ -1,0 +1,10 @@
+0.771428585052490234 $MarketCap_bin1 
+0.790322542190551758 and($MarketCap_bin1 !$BlockSize_bin9) 
+0.786666691303253174 or($MarketCap_bin1 $MinningDifficulty_bin8) 
+0.783132493495941162 or($MarketCap_bin1 $MinningDifficulty_bin2) 
+0.800000011920928955 and(or(!$HashRate_bin4 $MinningDifficulty_bin4) $MarketCap_bin1) 
+0.77586209774017334 and($MarketCap_bin1 !$MinningDifficulty_bin5) 
+0.795454561710357666 and(!$MarketCap_bin2 !$MinningDifficulty_bin0 !$MinningDifficulty_bin1) 
+0.81481480598449707 or(and($MarketCap_bin1 !$HashRate_bin4 !$MinningDifficulty_bin5) $MinningDifficulty_bin4) 
+0.774647891521453857 or($MarketCap_bin1 $MinningDifficulty_bin4) 
+0.793650805950164795 and(or($MarketCap_bin1 $MinningDifficulty_bin8) !$MinningDifficulty_bin5) 

@@ -1,0 +1,1 @@
+and(or($BlockSize_bin1 !$TransactionFee_bin0) !$MarketCap_bin1 !$BlockSize_bin4 !$GTrends_bin6) 

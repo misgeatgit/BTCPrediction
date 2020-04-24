@@ -1,0 +1,1 @@
+or(and(!$GTrends_bin0 !$HashRate_bin4 !$HashRate_bin5) $MinningDifficulty_bin4) 

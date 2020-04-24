@@ -1,0 +1,1 @@
+and(!$GTrends_bin5 !$TransactionPerDay_bin1 !$TransactionFee_bin5 !$TransactionVolume_USD_bin1) 

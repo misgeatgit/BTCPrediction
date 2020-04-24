@@ -1,0 +1,1 @@
+or(and($GTrends_bin0 !$HashRate_bin6) $GTrends_bin3) 

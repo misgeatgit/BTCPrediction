@@ -1,0 +1,10 @@
+0.809435665607452393 or(and($MarketCap_bin0 !$TransactionVolume_USD_bin5) and($MinningDifficulty_bin0 $TransactionPerDay_bin5)) 
+0.82830357551574707 or(and($MarketCap_bin0 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) and($HashRate_bin1 $TransactionPerDay_bin5)) 
+0.785714328289031982 or(and($MinningDifficulty_bin0 $TransactionPerDay_bin5) $MarketCap_bin0) 
+0.785714268684387207 or(and($MarketCap_bin0 !$TransactionVolume_USD_bin5) $MinningDifficulty_bin0) 
+0.743962347507476807 $MarketCap_bin0 
+0.803278684616088867 or(and($MarketCap_bin0 !$TransactionVolume_USD_bin5) and($TransactionPerDay_bin5 !$TransactionFee_bin0)) 
+0.803278684616088867 or(and($MarketCap_bin0 !$TransactionVolume_USD_bin5) and($TransactionPerDay_bin5 $TransactionFee_bin1)) 
+0.78125 or(and($TransactionPerDay_bin5 !$TransactionFee_bin0) $MarketCap_bin0) 
+0.78125 or(and($TransactionPerDay_bin5 $TransactionFee_bin1) $MarketCap_bin0) 
+0.800000011920928955 and(or(and($MarketCap_bin0 !$TransactionVolume_USD_bin5) $TransactionPerDay_bin5) !$MarketCap_bin1) 

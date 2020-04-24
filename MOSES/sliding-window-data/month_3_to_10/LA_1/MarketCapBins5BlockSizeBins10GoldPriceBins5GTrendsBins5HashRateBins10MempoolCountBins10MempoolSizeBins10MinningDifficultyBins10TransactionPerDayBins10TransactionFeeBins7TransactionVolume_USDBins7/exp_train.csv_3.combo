@@ -1,0 +1,1 @@
+and(or(!$MarketCap_bin1 $BlockSize_bin4) !$HashRate_bin0 !$TransactionFee_bin3 !$TransactionFee_bin5 !$TransactionVolume_USD_bin0) 

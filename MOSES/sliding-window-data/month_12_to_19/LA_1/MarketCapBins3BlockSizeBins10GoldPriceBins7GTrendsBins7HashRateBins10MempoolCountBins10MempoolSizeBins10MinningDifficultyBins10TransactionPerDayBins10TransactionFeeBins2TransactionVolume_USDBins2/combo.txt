@@ -1,0 +1,10 @@
+0.703125 and(!$MempoolCount_bin5 !$TransactionVolume_USD_bin0) 
+0.703125 and(!$MempoolSize_bin5 !$TransactionVolume_USD_bin0) 
+0.706896543502807617 or(and(!$MarketCap_bin1 !$TransactionVolume_USD_bin0) $MinningDifficulty_bin5) 
+0.683333337306976318 and(!$GTrends_bin5 !$TransactionVolume_USD_bin0) 
+0.703125 and(!$MempoolCount_bin5 !$MempoolSize_bin5 !$TransactionVolume_USD_bin0) 
+0.722222208976745605 or(and(!$MarketCap_bin1 !$TransactionPerDay_bin6 !$TransactionVolume_USD_bin0) $MinningDifficulty_bin5) 
+0.657534241676330566 !$TransactionVolume_USD_bin0 
+0.657534241676330566 $TransactionVolume_USD_bin1 
+0.696969687938690186 and(or($MinningDifficulty_bin5 !$TransactionPerDay_bin6) !$TransactionVolume_USD_bin0) 
+0.716666698455810547 or(and(!$GTrends_bin6 !$TransactionPerDay_bin6 !$TransactionVolume_USD_bin0) $MinningDifficulty_bin5) 

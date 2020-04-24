@@ -1,0 +1,1 @@
+or(and($GoldPrice_bin0 !$GoldPrice_bin2) $GoldPrice_bin5) 

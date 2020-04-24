@@ -1,0 +1,1 @@
+and(or(!$MempoolCount_bin4 !$MempoolSize_bin4) $MarketCap_bin0) 

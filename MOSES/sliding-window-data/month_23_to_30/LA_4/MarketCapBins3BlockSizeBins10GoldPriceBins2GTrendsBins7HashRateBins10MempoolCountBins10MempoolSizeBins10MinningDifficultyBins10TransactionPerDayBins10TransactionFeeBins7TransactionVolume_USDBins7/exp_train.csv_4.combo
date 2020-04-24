@@ -1,0 +1,1 @@
+or(and($MarketCap_bin0 !$HashRate_bin7 !$MempoolCount_bin8) and($GTrends_bin6 !$MempoolCount_bin3)) 

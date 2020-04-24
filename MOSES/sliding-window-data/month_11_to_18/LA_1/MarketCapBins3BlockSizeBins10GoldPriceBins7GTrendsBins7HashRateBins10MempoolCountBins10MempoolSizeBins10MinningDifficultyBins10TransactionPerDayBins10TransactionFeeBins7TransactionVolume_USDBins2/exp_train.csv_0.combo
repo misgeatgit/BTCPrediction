@@ -1,0 +1,1 @@
+and(!$GoldPrice_bin1 !$GTrends_bin5 !$MempoolCount_bin8 !$TransactionFee_bin2 $TransactionVolume_USD_bin0) 

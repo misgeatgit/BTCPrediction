@@ -1,0 +1,1 @@
+or(and(!$BlockSize_bin8 $TransactionVolume_USD_bin5) and(!$HashRate_bin5 $TransactionVolume_USD_bin1) $HashRate_bin6) 

@@ -1,0 +1,1 @@
+or(and(!$GTrends_bin1 !$MempoolSize_bin2 !$TransactionPerDay_bin4 !$TransactionFee_bin2 $TransactionVolume_USD_bin0) $HashRate_bin8) 

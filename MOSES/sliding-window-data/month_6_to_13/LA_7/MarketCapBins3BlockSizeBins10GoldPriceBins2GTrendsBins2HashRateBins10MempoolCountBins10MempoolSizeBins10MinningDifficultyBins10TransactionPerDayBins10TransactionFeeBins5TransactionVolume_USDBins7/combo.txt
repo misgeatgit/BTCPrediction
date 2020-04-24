@@ -1,0 +1,10 @@
+0.91803276538848877 and(!$GTrends_bin1 !$HashRate_bin4 !$TransactionVolume_USD_bin1) 
+0.931034505367279053 and(!$GTrends_bin1 !$HashRate_bin4 !$HashRate_bin8 !$TransactionVolume_USD_bin1) 
+0.887323915958404541 and(!$GTrends_bin1 !$HashRate_bin4) 
+0.885714292526245117 and(!$GTrends_bin1 !$TransactionVolume_USD_bin1) 
+0.86419755220413208 !$GTrends_bin1 
+0.90322577953338623 and(!$GTrends_bin1 !$TransactionVolume_USD_bin1 !$TransactionVolume_USD_bin2) 
+0.923076927661895752 and(!$BlockSize_bin0 !$GTrends_bin1 !$HashRate_bin4 !$TransactionVolume_USD_bin1) 
+0.920634925365447998 or(and(!$GTrends_bin1 !$HashRate_bin4 !$TransactionVolume_USD_bin1) $TransactionVolume_USD_bin5) 
+0.920634925365447998 and(or(and(!$GTrends_bin1 !$HashRate_bin4) $TransactionVolume_USD_bin5) !$TransactionVolume_USD_bin1) 
+0.900000035762786865 and(!$BlockSize_bin0 !$GTrends_bin1 !$TransactionVolume_USD_bin1) 

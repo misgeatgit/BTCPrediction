@@ -1,0 +1,1 @@
+and(or($GoldPrice_bin0 $MempoolCount_bin0) !$MarketCap_bin2) 

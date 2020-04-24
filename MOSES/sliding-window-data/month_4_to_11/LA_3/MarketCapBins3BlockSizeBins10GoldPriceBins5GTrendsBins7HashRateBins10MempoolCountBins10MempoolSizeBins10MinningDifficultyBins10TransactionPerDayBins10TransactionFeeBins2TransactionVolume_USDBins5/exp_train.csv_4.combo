@@ -1,0 +1,1 @@
+and(or(!$TransactionPerDay_bin0 $TransactionPerDay_bin5) !$MarketCap_bin0 !$BlockSize_bin0 !$BlockSize_bin9 !$TransactionVolume_USD_bin3) 

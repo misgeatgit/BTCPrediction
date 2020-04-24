@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.46,0.64,0.74,0.83,0.53,0.58,and(or(and(!$HashRate_bin6 !$TransactionFee_bin2) $TransactionVolume_USD_bin1) or($TransactionFee_bin2 $TransactionVolume_USD_bin0) !$TransactionFee_bin4) 
+0.47,0.63,0.72,0.83,0.53,0.58,and(or(and(!$HashRate_bin6 !$TransactionFee_bin2) $TransactionVolume_USD_bin1) or($TransactionFee_bin2 $TransactionVolume_USD_bin0)) 
+0.46,0.65,0.75,0.83,0.53,0.58,and(or(and(!$HashRate_bin6 !$TransactionFee_bin2) $TransactionVolume_USD_bin1) or($TransactionFee_bin2 $TransactionVolume_USD_bin0) !$TransactionFee_bin4 !$TransactionFee_bin6) 
+0.47,0.64,0.73,0.83,0.53,0.58,and(or(and(!$HashRate_bin6 !$TransactionFee_bin2) $TransactionVolume_USD_bin1) or($TransactionFee_bin2 $TransactionVolume_USD_bin0) !$TransactionFee_bin6) 
+0.45,0.65,0.77,0.39,0.3,0.41,and(or(and(!$TransactionPerDay_bin2 $TransactionFee_bin5) $TransactionVolume_USD_bin0) or(!$HashRate_bin7 $MinningDifficulty_bin6) !$HashRate_bin1 !$HashRate_bin6 !$TransactionFee_bin2) 
+0.47,0.66,0.78,0.39,0.3,0.41,and(or(and(!$TransactionPerDay_bin2 $TransactionFee_bin5) $BlockSize_bin1 $TransactionVolume_USD_bin0) or(!$HashRate_bin7 $MinningDifficulty_bin6) !$HashRate_bin1 !$HashRate_bin6 !$TransactionFee_bin2) 
+0.47,0.66,0.78,0.39,0.3,0.41,and(or(and(!$TransactionPerDay_bin2 $TransactionFee_bin5) $TransactionVolume_USD_bin0) or(!$HashRate_bin7 $MinningDifficulty_bin6 $TransactionPerDay_bin2) !$HashRate_bin1 !$HashRate_bin6 !$TransactionFee_bin2) 
+0.47,0.66,0.78,0.44,0.33,0.44,and(or(and(!$TransactionPerDay_bin2 $TransactionFee_bin5) $TransactionVolume_USD_bin0) or(!$HashRate_bin7 $MinningDifficulty_bin6 $TransactionFee_bin1) !$HashRate_bin1 !$HashRate_bin6 !$TransactionFee_bin2) 
+0.46,0.66,0.78,0.39,0.3,0.41,and(or(and(!$TransactionPerDay_bin2 $TransactionFee_bin5) $TransactionVolume_USD_bin0) or($BlockSize_bin1 !$HashRate_bin7 $MinningDifficulty_bin6) !$HashRate_bin1 !$HashRate_bin6 !$TransactionFee_bin2) 
+0.46,0.66,0.78,0.39,0.3,0.41,and(or(and(!$TransactionPerDay_bin2 $TransactionFee_bin5) $TransactionVolume_USD_bin0) or(!$HashRate_bin1 $TransactionPerDay_bin6) or(!$HashRate_bin7 $MinningDifficulty_bin6) !$HashRate_bin6 !$TransactionFee_bin2) 

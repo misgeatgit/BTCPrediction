@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.45,0.62,0.89,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) $MempoolCount_bin7) !$HashRate_bin8 !$MempoolCount_bin5) 
+0.45,0.62,0.89,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) $MempoolCount_bin7) !$HashRate_bin8 !$MempoolSize_bin5) 
+0.45,0.62,0.89,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) and(!$HashRate_bin8 $MempoolCount_bin7)) !$MempoolCount_bin5) 
+0.45,0.62,0.89,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) and(!$HashRate_bin8 $MempoolCount_bin7)) !$MempoolSize_bin5) 
+0.45,0.63,0.91,0.0,0.37,-1.0,and(or(and(or(and(!$MarketCap_bin1 !$MempoolCount_bin3) !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) $MempoolCount_bin7) !$HashRate_bin8 !$MempoolCount_bin5) 
+0.45,0.63,0.91,0.0,0.37,-1.0,and(or(and(or(and(!$MarketCap_bin1 !$MempoolCount_bin3) !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) and(!$HashRate_bin8 $MempoolCount_bin7)) !$MempoolCount_bin5) 
+0.45,0.63,0.91,0.0,0.37,-1.0,and(or(and(or(and(!$MarketCap_bin1 !$MempoolSize_bin3) !$GoldPrice_bin1) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) and(!$HashRate_bin8 $MempoolCount_bin7)) !$MempoolCount_bin5) 
+0.44,0.62,0.91,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1 $MempoolCount_bin3) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) $MempoolCount_bin7) !$BlockSize_bin9 !$MempoolSize_bin5) 
+0.44,0.62,0.91,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1 $MempoolSize_bin3) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) $MempoolCount_bin7) !$BlockSize_bin9 !$MempoolCount_bin5) 
+0.44,0.62,0.91,0.0,0.37,-1.0,and(or(and(or(!$MarketCap_bin1 !$GoldPrice_bin1 $MempoolSize_bin3) !$HashRate_bin1 !$MinningDifficulty_bin0 !$TransactionVolume_USD_bin1) $MempoolCount_bin7) !$BlockSize_bin9 !$MempoolSize_bin5) 

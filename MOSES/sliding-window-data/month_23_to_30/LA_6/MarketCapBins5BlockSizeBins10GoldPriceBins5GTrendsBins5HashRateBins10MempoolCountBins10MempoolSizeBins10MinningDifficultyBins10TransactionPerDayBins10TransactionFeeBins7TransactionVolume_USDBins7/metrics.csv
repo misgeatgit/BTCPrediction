@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.56,0.76,0.88,0.88,0.43,0.3,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) or(!$HashRate_bin3 $TransactionFee_bin5) !$MarketCap_bin4) 
+0.59,0.77,0.89,1.0,0.4,0.31,and(or(!$MarketCap_bin2 $MempoolSize_bin1 $TransactionFee_bin5 $TransactionVolume_USD_bin1) or(!$MempoolSize_bin4 $TransactionVolume_USD_bin4) !$MarketCap_bin3 !$MarketCap_bin4) 
+0.57,0.76,0.89,0.88,0.43,0.3,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) or(!$HashRate_bin3 $TransactionFee_bin5 $TransactionVolume_USD_bin1) !$MarketCap_bin4) 
+0.57,0.75,0.84,0.13,0.4,0.08,and(or($MarketCap_bin0 $HashRate_bin1 $TransactionFee_bin5 $TransactionVolume_USD_bin0) !$MarketCap_bin4 !$MempoolSize_bin4) 
+0.62,0.79,0.89,1.0,0.4,0.31,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3) $MempoolSize_bin1 $TransactionFee_bin5 $TransactionVolume_USD_bin1) or(and(!$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) !$MarketCap_bin4) 
+0.59,0.77,0.89,1.0,0.4,0.31,and(or(!$MarketCap_bin2 $MempoolSize_bin1 $TransactionFee_bin5 $TransactionVolume_USD_bin1) or(!$MempoolSize_bin4 $TransactionVolume_USD_bin4) !$MarketCap_bin3 !$MarketCap_bin4 !$MempoolCount_bin4) 
+0.59,0.77,0.89,1.0,0.4,0.31,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) or(!$MarketCap_bin3 !$HashRate_bin3 $TransactionFee_bin5 $TransactionVolume_USD_bin1) !$MarketCap_bin4) 
+0.59,0.77,0.89,1.0,0.4,0.31,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) or(!$GTrends_bin4 !$HashRate_bin3 $TransactionFee_bin5 $TransactionVolume_USD_bin1) !$MarketCap_bin4) 
+0.59,0.77,0.89,0.88,0.43,0.3,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) or(!$HashRate_bin3 $MinningDifficulty_bin2 $TransactionFee_bin5 $TransactionVolume_USD_bin1) !$MarketCap_bin4) 
+0.57,0.76,0.89,0.88,0.43,0.3,and(or(and(!$MarketCap_bin2 !$MarketCap_bin3 !$MempoolSize_bin4) $TransactionVolume_USD_bin4) or($MarketCap_bin2 !$HashRate_bin3 $TransactionFee_bin5 $TransactionVolume_USD_bin1) !$MarketCap_bin4) 

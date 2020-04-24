@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.39,0.54,0.85,0.0,0.3,-1.0,or($MinningDifficulty_bin5 $TransactionFee_bin2) 
+0.5,0.61,0.86,0.29,0.37,0.6,or($GTrends_bin3 $MinningDifficulty_bin5 $TransactionFee_bin2) 
+0.39,0.54,0.85,0.0,0.3,-1.0,and(or($MinningDifficulty_bin5 $TransactionFee_bin2) !$MinningDifficulty_bin7) 
+0.39,0.54,0.85,0.0,0.3,-1.0,and(or($MinningDifficulty_bin5 $TransactionFee_bin2) !$TransactionFee_bin1) 
+0.39,0.54,0.85,0.0,0.3,-1.0,or(and(!$MarketCap_bin2 $TransactionFee_bin2) $MinningDifficulty_bin5) 
+0.39,0.54,0.85,0.0,0.3,-1.0,or(and(!$BlockSize_bin1 $MinningDifficulty_bin5) $TransactionFee_bin2) 
+0.39,0.54,0.85,0.0,0.3,-1.0,or(and(!$BlockSize_bin2 $MinningDifficulty_bin5) $TransactionFee_bin2) 
+0.39,0.54,0.85,0.0,0.3,-1.0,or(and(!$GTrends_bin2 $MinningDifficulty_bin5) $TransactionFee_bin2) 
+0.39,0.54,0.85,0.0,0.3,-1.0,or(and(!$HashRate_bin7 $TransactionFee_bin2) $MinningDifficulty_bin5) 
+0.39,0.54,0.85,0.0,0.3,-1.0,or(and($MinningDifficulty_bin5 !$MinningDifficulty_bin7) $TransactionFee_bin2) 

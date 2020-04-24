@@ -1,0 +1,1 @@
+and(!$MarketCap_bin1 !$GTrends_bin5 !$GTrends_bin6 !$MempoolCount_bin0) 

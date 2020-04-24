@@ -1,0 +1,1 @@
+and(or(and(!$BlockSize_bin6 $GoldPrice_bin4) !$MarketCap_bin2) !$MarketCap_bin1) 

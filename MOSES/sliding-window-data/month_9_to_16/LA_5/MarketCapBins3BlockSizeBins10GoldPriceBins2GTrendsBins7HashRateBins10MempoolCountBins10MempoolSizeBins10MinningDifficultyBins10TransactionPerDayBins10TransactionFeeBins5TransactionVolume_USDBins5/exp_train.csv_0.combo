@@ -1,0 +1,1 @@
+and(!$MarketCap_bin1 !$GTrends_bin6 !$MinningDifficulty_bin0 !$TransactionPerDay_bin3 !$TransactionPerDay_bin6) 

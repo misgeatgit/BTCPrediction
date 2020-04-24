@@ -1,0 +1,1 @@
+and(!$MarketCap_bin0 !$GoldPrice_bin3 !$TransactionFee_bin3 !$TransactionVolume_USD_bin6) 

@@ -1,0 +1,1 @@
+or(and($BlockSize_bin7 $MempoolSize_bin3) $GoldPrice_bin4 $MinningDifficulty_bin1) 

@@ -1,0 +1,1 @@
+and(or($MempoolCount_bin6 $TransactionFee_bin3 $TransactionVolume_USD_bin0) !$MarketCap_bin1) 

@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.43,0.62,0.74,0.08,0.63,1.0,and(!$MinningDifficulty_bin2 !$MinningDifficulty_bin3 !$TransactionFee_bin0) 
+0.43,0.62,0.74,0.08,0.63,1.0,and(!$MinningDifficulty_bin2 !$MinningDifficulty_bin3 $TransactionFee_bin1) 
+0.44,0.62,0.75,0.08,0.63,1.0,and(or($HashRate_bin2 !$MinningDifficulty_bin3) !$MinningDifficulty_bin2 !$TransactionFee_bin0) 
+0.44,0.62,0.75,0.08,0.63,1.0,and(or($MempoolCount_bin6 !$TransactionFee_bin0) !$MinningDifficulty_bin2 !$MinningDifficulty_bin3) 
+0.44,0.62,0.75,0.08,0.63,1.0,and(or($MempoolSize_bin6 !$TransactionFee_bin0) !$MinningDifficulty_bin2 !$MinningDifficulty_bin3) 
+0.48,0.64,0.76,0.08,0.63,1.0,or(and($BlockSize_bin3 $MinningDifficulty_bin7) and(!$MinningDifficulty_bin2 !$MinningDifficulty_bin3 $TransactionFee_bin1)) 
+0.43,0.62,0.74,0.08,0.63,1.0,and(!$BlockSize_bin1 !$MinningDifficulty_bin2 !$MinningDifficulty_bin3 $TransactionFee_bin1) 
+0.43,0.62,0.74,0.08,0.63,1.0,and(!$HashRate_bin6 !$MinningDifficulty_bin2 !$MinningDifficulty_bin3 $TransactionFee_bin1) 
+0.43,0.62,0.74,0.0,0.6,-1.0,and(!$HashRate_bin8 !$MinningDifficulty_bin2 !$MinningDifficulty_bin3 $TransactionFee_bin1) 
+0.43,0.62,0.74,0.08,0.63,1.0,and(!$MinningDifficulty_bin2 !$MinningDifficulty_bin3 !$TransactionFee_bin0 $TransactionFee_bin1) 

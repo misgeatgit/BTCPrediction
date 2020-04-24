@@ -1,0 +1,1 @@
+or(and(!$GoldPrice_bin2 $TransactionVolume_USD_bin0) $GoldPrice_bin4 $TransactionFee_bin5) 

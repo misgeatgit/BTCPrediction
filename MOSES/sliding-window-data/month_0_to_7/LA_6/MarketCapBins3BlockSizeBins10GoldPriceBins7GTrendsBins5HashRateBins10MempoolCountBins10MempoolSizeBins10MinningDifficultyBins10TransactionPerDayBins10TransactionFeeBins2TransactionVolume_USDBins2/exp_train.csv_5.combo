@@ -1,0 +1,1 @@
+or(and($GTrends_bin0 !$HashRate_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin0) $GTrends_bin3) 

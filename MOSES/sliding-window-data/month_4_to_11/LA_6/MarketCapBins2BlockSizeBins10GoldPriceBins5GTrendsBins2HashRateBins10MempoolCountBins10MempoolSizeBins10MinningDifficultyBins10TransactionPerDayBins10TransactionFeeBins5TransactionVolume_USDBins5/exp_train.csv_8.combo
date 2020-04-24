@@ -1,0 +1,1 @@
+or(and($GTrends_bin0 !$HashRate_bin1 !$TransactionVolume_USD_bin2) $BlockSize_bin6) 

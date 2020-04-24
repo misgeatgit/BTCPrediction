@@ -1,0 +1,10 @@
+0.870370388031005859 and(or(!$MempoolSize_bin0 !$TransactionVolume_USD_bin0) $MarketCap_bin0 !$MempoolCount_bin4) 
+0.870370388031005859 and(or(!$MempoolSize_bin0 !$TransactionVolume_USD_bin0) $MarketCap_bin0 !$MempoolSize_bin4) 
+0.867924511432647705 and(or($MarketCap_bin0 $MinningDifficulty_bin5) or($GoldPrice_bin1 $TransactionFee_bin1)) 
+0.861545741558074951 and(!$BlockSize_bin2 !$MempoolSize_bin0 !$MinningDifficulty_bin2 $TransactionFee_bin0) 
+0.821428596973419189 or($MarketCap_bin0 $MinningDifficulty_bin4) 
+0.880776524543762207 and(or($MarketCap_bin0 $MinningDifficulty_bin5) or($GoldPrice_bin1 $TransactionFee_bin1) !$MarketCap_bin2) 
+0.800000011920928955 $MarketCap_bin0 
+0.83948826789855957 and($MarketCap_bin0 !$MempoolCount_bin4 !$MempoolSize_bin0) 
+0.83948826789855957 and($MarketCap_bin0 !$MempoolSize_bin0 !$MempoolSize_bin4) 
+0.816666662693023682 and(!$MarketCap_bin1 $TransactionFee_bin0) 

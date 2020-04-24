@@ -1,0 +1,1 @@
+and(!$MinningDifficulty_bin1 !$TransactionPerDay_bin0 !$TransactionPerDay_bin4 !$TransactionFee_bin0 !$TransactionFee_bin1 !$TransactionFee_bin4) 

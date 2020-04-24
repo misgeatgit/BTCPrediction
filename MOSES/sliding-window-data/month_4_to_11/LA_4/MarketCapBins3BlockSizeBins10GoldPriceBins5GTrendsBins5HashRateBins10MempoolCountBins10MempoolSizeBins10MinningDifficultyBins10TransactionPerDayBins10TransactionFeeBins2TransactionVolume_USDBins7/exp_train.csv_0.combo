@@ -1,0 +1,1 @@
+or(and($MarketCap_bin1 !$GTrends_bin4 !$MempoolSize_bin6) $MinningDifficulty_bin4) 

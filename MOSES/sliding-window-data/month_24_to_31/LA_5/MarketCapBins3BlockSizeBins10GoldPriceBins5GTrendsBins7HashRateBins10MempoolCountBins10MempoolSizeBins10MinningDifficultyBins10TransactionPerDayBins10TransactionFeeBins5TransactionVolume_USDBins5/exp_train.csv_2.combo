@@ -1,0 +1,1 @@
+and(!$MarketCap_bin2 !$HashRate_bin3 !$MinningDifficulty_bin3 !$MinningDifficulty_bin5 !$MinningDifficulty_bin8 !$TransactionPerDay_bin5 !$TransactionPerDay_bin7) 

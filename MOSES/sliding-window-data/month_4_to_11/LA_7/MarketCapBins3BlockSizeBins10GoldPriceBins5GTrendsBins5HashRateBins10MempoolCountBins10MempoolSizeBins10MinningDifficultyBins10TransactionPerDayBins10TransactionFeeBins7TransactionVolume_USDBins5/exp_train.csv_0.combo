@@ -1,0 +1,1 @@
+and(or($GTrends_bin0 $GTrends_bin2) !$MempoolCount_bin1) 

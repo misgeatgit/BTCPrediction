@@ -1,0 +1,1 @@
+or(and(!$MarketCap_bin4 !$GTrends_bin2 !$HashRate_bin7 !$MempoolSize_bin5 !$TransactionFee_bin5 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin1) $HashRate_bin2) 

@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.53,0.72,0.91,0.18,0.37,0.8,or(and(or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$TransactionVolume_USD_bin3) $MinningDifficulty_bin0 $MinningDifficulty_bin1) !$MempoolCount_bin5 !$MempoolSize_bin4) and($GTrends_bin5 $TransactionVolume_USD_bin3)) 
+0.53,0.72,0.91,0.18,0.37,0.8,and(or(and(or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$TransactionVolume_USD_bin3) $MinningDifficulty_bin0 $MinningDifficulty_bin1) !$MempoolCount_bin5) and($GTrends_bin5 $TransactionVolume_USD_bin3)) !$MempoolSize_bin4) 
+0.47,0.67,0.85,0.09,0.33,1.0,or(and(or(and(!$BlockSize_bin4 $TransactionFee_bin1) $TransactionFee_bin2) !$MempoolSize_bin4 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin1) 
+0.47,0.67,0.85,0.09,0.33,1.0,and(or(and(or(and(!$BlockSize_bin4 $TransactionFee_bin1) $TransactionFee_bin2) !$TransactionVolume_USD_bin3) $MinningDifficulty_bin1) !$MempoolSize_bin4) 
+0.48,0.67,0.82,0.09,0.33,1.0,or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$MempoolCount_bin4 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin1) 
+0.48,0.67,0.82,0.09,0.33,1.0,or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$MempoolSize_bin4 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin1) 
+0.48,0.67,0.82,0.09,0.33,1.0,and(or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$TransactionVolume_USD_bin3) $MinningDifficulty_bin1) !$MempoolCount_bin4) 
+0.48,0.67,0.82,0.09,0.33,1.0,and(or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$TransactionVolume_USD_bin3) $MinningDifficulty_bin1) !$MempoolSize_bin4) 
+0.47,0.66,0.81,0.09,0.33,1.0,and(or($MinningDifficulty_bin1 $TransactionFee_bin1 $TransactionFee_bin2) !$MempoolSize_bin4 !$TransactionVolume_USD_bin3) 
+0.53,0.72,0.91,0.18,0.37,0.8,or(and(or(and(or($TransactionFee_bin1 $TransactionFee_bin2) !$MempoolCount_bin4 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin0 $MinningDifficulty_bin1) !$MempoolCount_bin5 !$MempoolSize_bin4) and($GTrends_bin5 $TransactionVolume_USD_bin3)) 

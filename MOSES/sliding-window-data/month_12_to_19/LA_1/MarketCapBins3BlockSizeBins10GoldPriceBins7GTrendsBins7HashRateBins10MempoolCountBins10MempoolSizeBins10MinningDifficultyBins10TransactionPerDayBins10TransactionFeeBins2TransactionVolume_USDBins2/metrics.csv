@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.44,0.57,0.7,1.0,0.53,0.53,and(!$MempoolCount_bin5 !$TransactionVolume_USD_bin0) 
+0.44,0.57,0.7,1.0,0.53,0.53,and(!$MempoolSize_bin5 !$TransactionVolume_USD_bin0) 
+0.4,0.56,0.71,1.0,0.53,0.53,or(and(!$MarketCap_bin1 !$TransactionVolume_USD_bin0) $MinningDifficulty_bin5) 
+0.4,0.54,0.68,0.75,0.47,0.5,and(!$GTrends_bin5 !$TransactionVolume_USD_bin0) 
+0.44,0.57,0.7,1.0,0.53,0.53,and(!$MempoolCount_bin5 !$MempoolSize_bin5 !$TransactionVolume_USD_bin0) 
+0.38,0.56,0.72,0.94,0.53,0.54,or(and(!$MarketCap_bin1 !$TransactionPerDay_bin6 !$TransactionVolume_USD_bin0) $MinningDifficulty_bin5) 
+0.47,0.55,0.66,1.0,0.53,0.53,!$TransactionVolume_USD_bin0 
+0.47,0.55,0.66,1.0,0.53,0.53,$TransactionVolume_USD_bin1 
+0.45,0.57,0.7,0.94,0.53,0.54,and(or($MinningDifficulty_bin5 !$TransactionPerDay_bin6) !$TransactionVolume_USD_bin0) 
+0.42,0.57,0.72,0.88,0.6,0.58,or(and(!$GTrends_bin6 !$TransactionPerDay_bin6 !$TransactionVolume_USD_bin0) $MinningDifficulty_bin5) 

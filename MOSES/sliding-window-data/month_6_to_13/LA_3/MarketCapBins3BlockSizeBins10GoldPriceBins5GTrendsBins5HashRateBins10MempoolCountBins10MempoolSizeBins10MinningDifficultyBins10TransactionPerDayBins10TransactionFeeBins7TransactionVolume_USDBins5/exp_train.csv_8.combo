@@ -1,0 +1,1 @@
+and(or($GTrends_bin1 $TransactionVolume_USD_bin0) !$BlockSize_bin8) 

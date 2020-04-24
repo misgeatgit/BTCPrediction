@@ -1,0 +1,1 @@
+or(and($GoldPrice_bin0 !$HashRate_bin6 !$MinningDifficulty_bin8) $GoldPrice_bin2) 

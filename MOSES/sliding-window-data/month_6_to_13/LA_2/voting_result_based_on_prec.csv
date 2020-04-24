@@ -1,0 +1,2 @@
+training_accuracy,training_precision,test_accuracy,test_precision
+0.49,0.97,0.53,0.55

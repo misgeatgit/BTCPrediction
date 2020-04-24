@@ -1,0 +1,1 @@
+and(or(!$TransactionPerDay_bin4 $TransactionVolume_USD_bin0) $GoldPrice_bin0 !$GTrends_bin3 !$GTrends_bin4 !$HashRate_bin7 !$MempoolCount_bin0) 

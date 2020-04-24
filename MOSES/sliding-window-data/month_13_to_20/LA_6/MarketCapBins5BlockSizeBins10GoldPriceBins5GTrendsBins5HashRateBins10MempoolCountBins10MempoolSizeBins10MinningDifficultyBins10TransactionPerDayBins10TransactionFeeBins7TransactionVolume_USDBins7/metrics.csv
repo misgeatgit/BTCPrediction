@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.42,0.59,0.96,0.17,0.73,0.25,and(!$GoldPrice_bin4 !$GTrends_bin0 !$MempoolCount_bin8 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.42,0.59,0.96,0.17,0.73,0.25,and(!$GoldPrice_bin4 !$GTrends_bin0 !$MempoolSize_bin8 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.46,0.62,0.98,0.0,0.6,0.0,or(and(!$GTrends_bin0 !$GTrends_bin2 !$MempoolCount_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) 
+0.46,0.62,0.98,0.0,0.6,0.0,and(or(and(!$GTrends_bin0 !$GTrends_bin2 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) !$MempoolCount_bin0) 
+0.44,0.61,0.98,0.0,0.6,0.0,and(or(and(!$GTrends_bin0 !$MempoolCount_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) !$GTrends_bin2) 
+0.44,0.61,0.98,0.0,0.6,0.0,and(or(and(!$GTrends_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) !$GTrends_bin2 !$MempoolCount_bin0) 
+0.52,0.65,0.95,0.0,0.6,0.0,or(and(!$GTrends_bin0 !$GTrends_bin2 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) 
+0.62,0.72,0.97,0.17,0.73,0.25,or(and(!$GoldPrice_bin4 !$GTrends_bin0 !$MempoolCount_bin8 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) 
+0.62,0.72,0.97,0.17,0.73,0.25,and(or(and(!$GTrends_bin0 !$MempoolCount_bin8 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) !$GoldPrice_bin4) 
+0.59,0.71,0.97,0.5,0.63,0.27,or(and(!$GTrends_bin0 !$MempoolCount_bin8 !$MinningDifficulty_bin2 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) $MinningDifficulty_bin5) 

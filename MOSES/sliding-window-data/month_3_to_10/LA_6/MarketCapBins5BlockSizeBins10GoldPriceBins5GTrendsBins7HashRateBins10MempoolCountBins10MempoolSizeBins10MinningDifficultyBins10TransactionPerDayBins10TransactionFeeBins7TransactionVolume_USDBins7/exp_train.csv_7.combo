@@ -1,0 +1,1 @@
+and(or(!$MarketCap_bin3 !$MempoolSize_bin7) or($GoldPrice_bin0 $TransactionFee_bin4) !$GTrends_bin6) 

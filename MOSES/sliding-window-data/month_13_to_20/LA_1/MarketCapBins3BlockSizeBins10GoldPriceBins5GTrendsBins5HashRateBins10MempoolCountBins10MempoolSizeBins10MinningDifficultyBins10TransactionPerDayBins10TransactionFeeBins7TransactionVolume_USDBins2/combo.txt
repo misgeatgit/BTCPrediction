@@ -1,0 +1,10 @@
+0.694915235042572021 and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0) 
+0.727272748947143555 and(or($HashRate_bin8 !$MempoolCount_bin9) !$TransactionFee_bin4 !$TransactionVolume_USD_bin0) 
+0.701754391193389893 and(!$TransactionFee_bin1 !$TransactionFee_bin4 !$TransactionVolume_USD_bin0) 
+0.699999988079071045 and(or($BlockSize_bin8 !$TransactionFee_bin4) !$TransactionVolume_USD_bin0) 
+0.699999988079071045 and(or($TransactionPerDay_bin4 !$TransactionFee_bin4) !$TransactionVolume_USD_bin0) 
+0.699999988079071045 or(and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0) $BlockSize_bin8) 
+0.657534241676330566 !$TransactionVolume_USD_bin0 
+0.657534241676330566 $TransactionVolume_USD_bin1 
+0.696428596973419189 and(!$TransactionPerDay_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin0) 
+0.696428596973419189 and(!$TransactionPerDay_bin4 !$TransactionFee_bin4 !$TransactionVolume_USD_bin0) 

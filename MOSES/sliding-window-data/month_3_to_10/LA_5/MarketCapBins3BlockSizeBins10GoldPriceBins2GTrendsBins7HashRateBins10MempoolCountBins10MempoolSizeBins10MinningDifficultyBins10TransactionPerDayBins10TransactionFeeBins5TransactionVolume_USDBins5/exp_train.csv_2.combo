@@ -1,0 +1,1 @@
+and(!$GTrends_bin5 !$GTrends_bin6 !$MempoolSize_bin9 !$TransactionPerDay_bin3 !$TransactionPerDay_bin5 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin2) 

@@ -1,0 +1,1 @@
+or(and(!$TransactionPerDay_bin0 $TransactionFee_bin0) $HashRate_bin0) 

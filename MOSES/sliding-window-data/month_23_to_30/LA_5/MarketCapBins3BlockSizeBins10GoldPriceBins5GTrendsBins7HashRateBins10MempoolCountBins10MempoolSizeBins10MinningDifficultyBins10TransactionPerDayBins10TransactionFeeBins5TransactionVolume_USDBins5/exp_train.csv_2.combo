@@ -1,0 +1,1 @@
+or(and(!$BlockSize_bin8 !$GTrends_bin0 !$HashRate_bin3 $TransactionVolume_USD_bin0) $MarketCap_bin0) 

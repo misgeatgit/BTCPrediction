@@ -1,0 +1,1 @@
+and(or($GoldPrice_bin4 $GTrends_bin0 $TransactionPerDay_bin1) !$MinningDifficulty_bin0 !$MinningDifficulty_bin1) 

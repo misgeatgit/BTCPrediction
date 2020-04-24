@@ -1,0 +1,1 @@
+and(or(and(or(!$MarketCap_bin1 $MempoolSize_bin5) !$MarketCap_bin2 !$HashRate_bin7) $TransactionPerDay_bin5) !$TransactionPerDay_bin2) 

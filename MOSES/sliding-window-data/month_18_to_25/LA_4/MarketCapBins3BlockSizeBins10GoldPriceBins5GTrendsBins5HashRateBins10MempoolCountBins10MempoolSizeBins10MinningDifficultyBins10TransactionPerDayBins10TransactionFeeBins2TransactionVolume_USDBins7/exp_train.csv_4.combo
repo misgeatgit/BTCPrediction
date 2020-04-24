@@ -1,0 +1,1 @@
+and(or(and(!$HashRate_bin6 $MinningDifficulty_bin3) $MarketCap_bin0 $GTrends_bin4) !$MarketCap_bin2) 

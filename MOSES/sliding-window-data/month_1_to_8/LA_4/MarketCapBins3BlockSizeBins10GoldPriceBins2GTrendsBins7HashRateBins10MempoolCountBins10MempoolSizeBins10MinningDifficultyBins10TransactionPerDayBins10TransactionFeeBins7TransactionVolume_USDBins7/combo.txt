@@ -1,0 +1,10 @@
+0.851851880550384521 and(or(and(!$MempoolCount_bin9 !$TransactionFee_bin0 !$TransactionFee_bin1 !$TransactionFee_bin2 !$TransactionVolume_USD_bin4) $TransactionPerDay_bin5) !$MinningDifficulty_bin4) 
+0.746835470199584961 or($GoldPrice_bin0 $HashRate_bin5) 
+0.803571462631225586 or(and($GoldPrice_bin0 !$MempoolSize_bin2 !$TransactionFee_bin1 !$TransactionVolume_USD_bin4) $TransactionFee_bin6) 
+0.796296298503875732 and(or(and(!$MempoolSize_bin2 !$TransactionFee_bin1 !$TransactionVolume_USD_bin4) $TransactionFee_bin6) $GoldPrice_bin0) 
+0.714285731315612793 $GoldPrice_bin0 
+0.792452812194824219 and($GoldPrice_bin0 !$MempoolSize_bin2 !$MinningDifficulty_bin0 !$TransactionFee_bin1 !$TransactionVolume_USD_bin4) 
+0.771929800510406494 and(or(and(!$MempoolSize_bin2 !$TransactionVolume_USD_bin4) $TransactionFee_bin6) $GoldPrice_bin0) 
+0.771929800510406494 and(or(and(!$TransactionFee_bin1 !$TransactionVolume_USD_bin4) $TransactionFee_bin6) $GoldPrice_bin0) 
+0.851851880550384521 and(or(and(!$MempoolCount_bin9 !$TransactionFee_bin0 !$TransactionFee_bin1 !$TransactionFee_bin2 !$TransactionVolume_USD_bin4) $TransactionPerDay_bin5) or(!$MinningDifficulty_bin4 $MinningDifficulty_bin8)) 
+0.75 or($GoldPrice_bin0 $HashRate_bin5 $TransactionFee_bin5) 

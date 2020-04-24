@@ -1,0 +1,10 @@
+0.824561417102813721 or($MarketCap_bin0 $HashRate_bin1) 
+0.841269850730895996 or($MarketCap_bin0 $GoldPrice_bin1 $HashRate_bin1) 
+0.792225480079650879 $MarketCap_bin0 
+0.811320781707763672 or($MarketCap_bin0 $TransactionVolume_USD_bin0) 
+0.83050847053527832 or($MarketCap_bin0 $GoldPrice_bin1 $TransactionVolume_USD_bin0) 
+0.83050847053527832 or($MarketCap_bin0 $HashRate_bin1 $TransactionVolume_USD_bin0) 
+0.824561417102813721 or($MarketCap_bin0 $HashRate_bin0 $HashRate_bin1) 
+0.84375 or($MarketCap_bin0 $GoldPrice_bin1 $HashRate_bin1 $TransactionVolume_USD_bin0) 
+0.811320781707763672 or(and($TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) $MarketCap_bin0) 
+0.83050847053527832 or(and($TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) $MarketCap_bin0 $GoldPrice_bin1) 

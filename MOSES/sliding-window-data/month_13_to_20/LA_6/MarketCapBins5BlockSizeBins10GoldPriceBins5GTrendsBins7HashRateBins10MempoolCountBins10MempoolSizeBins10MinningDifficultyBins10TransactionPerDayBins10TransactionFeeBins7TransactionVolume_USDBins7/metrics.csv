@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.41,0.57,0.94,0.33,0.77,0.4,and(!$GoldPrice_bin4 !$MempoolCount_bin5 !$MempoolSize_bin8 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.41,0.57,0.94,0.33,0.77,0.4,and(!$GoldPrice_bin4 !$MempoolSize_bin5 !$MempoolSize_bin8 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.41,0.57,0.94,0.33,0.77,0.4,and(!$GoldPrice_bin4 !$MempoolSize_bin8 !$MinningDifficulty_bin6 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.44,0.58,0.91,0.33,0.77,0.4,and(!$GoldPrice_bin4 !$MempoolCount_bin8 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.44,0.58,0.91,0.33,0.77,0.4,and(!$GoldPrice_bin4 !$MempoolSize_bin8 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.42,0.57,0.91,0.17,0.73,0.25,and(!$GoldPrice_bin4 !$HashRate_bin7 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.41,0.56,0.91,0.33,0.87,1.0,and(!$GoldPrice_bin4 !$GTrends_bin2 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.42,0.57,0.93,0.33,0.77,0.4,and(!$GoldPrice_bin4 !$MempoolSize_bin8 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.4,0.55,0.91,0.0,0.8,-1.0,and(!$GoldPrice_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) 
+0.43,0.59,0.95,0.33,0.77,0.4,and(or(!$MempoolCount_bin5 !$MinningDifficulty_bin6) !$GoldPrice_bin4 !$MempoolSize_bin8 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 

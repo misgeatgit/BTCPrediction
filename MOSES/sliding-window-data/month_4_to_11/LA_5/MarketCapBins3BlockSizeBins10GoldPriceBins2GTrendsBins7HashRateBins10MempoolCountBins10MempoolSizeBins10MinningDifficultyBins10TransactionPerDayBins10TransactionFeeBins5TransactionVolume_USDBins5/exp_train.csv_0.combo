@@ -1,0 +1,1 @@
+and(!$MinningDifficulty_bin1 !$TransactionPerDay_bin4 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin4) 

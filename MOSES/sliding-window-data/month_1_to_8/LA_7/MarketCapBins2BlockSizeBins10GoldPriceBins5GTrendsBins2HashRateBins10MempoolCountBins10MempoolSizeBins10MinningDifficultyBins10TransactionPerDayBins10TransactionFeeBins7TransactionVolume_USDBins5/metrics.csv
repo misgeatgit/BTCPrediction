@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.52,0.67,0.92,0.26,0.5,0.83,and(or(!$MarketCap_bin0 $MinningDifficulty_bin3) !$MinningDifficulty_bin8 !$TransactionVolume_USD_bin3) 
+0.52,0.67,0.92,0.26,0.5,0.83,or(and(!$MarketCap_bin0 !$MinningDifficulty_bin8 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin3) 
+0.52,0.67,0.92,0.26,0.5,0.83,and(or(and(!$MarketCap_bin0 !$MinningDifficulty_bin8) $MinningDifficulty_bin3) !$TransactionVolume_USD_bin3) 
+0.52,0.67,0.92,0.26,0.5,0.83,and(or(and(!$MarketCap_bin0 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin3) !$MinningDifficulty_bin8) 
+0.53,0.66,0.89,0.63,0.47,0.57,and(or(!$MarketCap_bin0 $MinningDifficulty_bin3) !$TransactionVolume_USD_bin3) 
+0.53,0.66,0.89,0.63,0.47,0.57,or(and(!$MarketCap_bin0 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin3) 
+0.45,0.63,0.92,0.26,0.5,0.83,and(or(!$MarketCap_bin0 $MinningDifficulty_bin3) !$BlockSize_bin7 !$MinningDifficulty_bin8 !$TransactionVolume_USD_bin3) 
+0.45,0.63,0.92,0.26,0.5,0.83,or(and(!$MarketCap_bin0 !$BlockSize_bin7 !$MinningDifficulty_bin8 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin3) 
+0.45,0.63,0.92,0.26,0.5,0.83,and(or(and(!$MarketCap_bin0 !$BlockSize_bin7) $MinningDifficulty_bin3) !$MinningDifficulty_bin8 !$TransactionVolume_USD_bin3) 
+0.45,0.63,0.92,0.26,0.5,0.83,and(or(and(!$MarketCap_bin0 !$MinningDifficulty_bin8 !$TransactionVolume_USD_bin3) $MinningDifficulty_bin3) !$BlockSize_bin7) 

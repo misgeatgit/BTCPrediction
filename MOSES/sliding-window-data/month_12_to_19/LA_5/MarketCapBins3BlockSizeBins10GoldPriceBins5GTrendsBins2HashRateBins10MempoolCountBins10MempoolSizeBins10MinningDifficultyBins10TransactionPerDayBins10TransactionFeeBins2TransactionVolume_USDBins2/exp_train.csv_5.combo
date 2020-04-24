@@ -1,0 +1,1 @@
+and(!$GoldPrice_bin0 !$HashRate_bin3 !$MempoolSize_bin5 !$MinningDifficulty_bin3 $TransactionFee_bin0) 

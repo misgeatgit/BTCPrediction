@@ -1,0 +1,1 @@
+or(and(or($MarketCap_bin1 $TransactionPerDay_bin5) or($BlockSize_bin2 $TransactionPerDay_bin3)) $MarketCap_bin0) 

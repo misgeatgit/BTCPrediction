@@ -1,0 +1,10 @@
+0.904761910438537598 and($GTrends_bin0 !$TransactionFee_bin0) 
+0.880952417850494385 $GTrends_bin0 
+0.948275864124298096 and(or(and($MarketCap_bin0 !$BlockSize_bin8) !$GTrends_bin1) !$TransactionFee_bin0 !$TransactionFee_bin3) 
+0.947368443012237549 and(or($BlockSize_bin1 !$TransactionFee_bin0) $GTrends_bin0 !$GTrends_bin1 !$TransactionPerDay_bin7) 
+0.927040159702301025 and($GTrends_bin0 !$GTrends_bin1 !$TransactionPerDay_bin7 !$TransactionFee_bin0) 
+0.946270883083343506 and(or($MarketCap_bin0 !$GTrends_bin1) !$BlockSize_bin8 !$TransactionFee_bin0 !$TransactionFee_bin3) 
+0.904761910438537598 and($GTrends_bin0 !$GTrends_bin1 !$TransactionFee_bin0) 
+0.904761910438537598 and(or($TransactionPerDay_bin9 !$TransactionFee_bin0) !$GTrends_bin1) 
+0.924528300762176514 and(or($TransactionPerDay_bin9 !$TransactionFee_bin3) $GTrends_bin0 !$TransactionFee_bin0) 
+0.924528300762176514 and(or($TransactionPerDay_bin9 !$TransactionFee_bin3) !$GTrends_bin1 !$TransactionFee_bin0) 

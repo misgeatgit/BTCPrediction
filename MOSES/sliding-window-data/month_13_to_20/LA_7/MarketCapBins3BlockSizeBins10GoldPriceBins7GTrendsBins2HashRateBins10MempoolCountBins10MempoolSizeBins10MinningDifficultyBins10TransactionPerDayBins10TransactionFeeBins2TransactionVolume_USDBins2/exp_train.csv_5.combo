@@ -1,0 +1,1 @@
+and(!$BlockSize_bin4 !$GoldPrice_bin6 !$MempoolSize_bin0 !$TransactionPerDay_bin3 $TransactionFee_bin0) 

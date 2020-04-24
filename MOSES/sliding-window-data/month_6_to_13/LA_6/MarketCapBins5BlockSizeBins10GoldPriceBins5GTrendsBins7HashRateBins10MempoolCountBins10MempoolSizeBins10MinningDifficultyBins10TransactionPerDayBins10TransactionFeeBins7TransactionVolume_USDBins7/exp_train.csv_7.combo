@@ -1,0 +1,1 @@
+and(or($GoldPrice_bin4 $GTrends_bin0 $TransactionVolume_USD_bin0) !$HashRate_bin4) 

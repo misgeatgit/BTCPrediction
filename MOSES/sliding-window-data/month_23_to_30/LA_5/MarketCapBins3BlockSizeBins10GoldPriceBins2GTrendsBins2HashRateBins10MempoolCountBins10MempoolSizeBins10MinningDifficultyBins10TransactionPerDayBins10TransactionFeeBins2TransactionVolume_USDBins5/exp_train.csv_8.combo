@@ -1,0 +1,1 @@
+or(and(or(and(!$MarketCap_bin2 !$MinningDifficulty_bin4) $TransactionPerDay_bin3) $TransactionVolume_USD_bin3) $MarketCap_bin0) 

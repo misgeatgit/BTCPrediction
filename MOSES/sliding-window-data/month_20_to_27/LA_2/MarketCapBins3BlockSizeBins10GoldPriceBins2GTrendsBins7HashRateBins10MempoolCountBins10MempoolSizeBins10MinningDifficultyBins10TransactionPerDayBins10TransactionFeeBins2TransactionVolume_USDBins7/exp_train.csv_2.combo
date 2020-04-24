@@ -1,0 +1,1 @@
+or(and(!$MempoolSize_bin0 $TransactionPerDay_bin5) $BlockSize_bin9 $TransactionVolume_USD_bin2) 

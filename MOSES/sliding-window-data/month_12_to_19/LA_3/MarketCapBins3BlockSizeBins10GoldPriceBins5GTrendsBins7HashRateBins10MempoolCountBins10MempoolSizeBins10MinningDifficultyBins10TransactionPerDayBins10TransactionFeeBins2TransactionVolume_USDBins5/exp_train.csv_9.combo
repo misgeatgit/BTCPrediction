@@ -1,0 +1,1 @@
+and(!$GoldPrice_bin4 $TransactionFee_bin0 !$TransactionVolume_USD_bin0) 

@@ -1,0 +1,1 @@
+and(or(!$HashRate_bin7 !$TransactionVolume_USD_bin0) !$BlockSize_bin0 !$GTrends_bin0 !$HashRate_bin0 !$MinningDifficulty_bin5 !$TransactionFee_bin3) 

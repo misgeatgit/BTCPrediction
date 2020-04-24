@@ -1,0 +1,1 @@
+and(or(!$HashRate_bin2 $TransactionPerDay_bin3) or($MinningDifficulty_bin5 $TransactionVolume_USD_bin2 $TransactionVolume_USD_bin3) !$MempoolCount_bin3) 

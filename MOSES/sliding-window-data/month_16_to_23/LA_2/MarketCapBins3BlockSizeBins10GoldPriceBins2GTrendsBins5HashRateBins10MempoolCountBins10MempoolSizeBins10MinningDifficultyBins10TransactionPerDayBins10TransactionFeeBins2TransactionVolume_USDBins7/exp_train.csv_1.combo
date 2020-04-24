@@ -1,0 +1,1 @@
+and(or(!$MarketCap_bin2 $BlockSize_bin2) !$MempoolCount_bin5 !$MinningDifficulty_bin7) 
