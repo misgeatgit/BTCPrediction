@@ -33,8 +33,9 @@ def main(train_winsize, test_size, data, saving_dir):
         if path.exists(abs_path):
             rmtree(abs_path)
         mkdir(abs_path)
-        train_df.to_csv(abs_path+'/exp_train.csv', sep=',')
-        test_df.to_csv(abs_path+'/exp_test.csv', sep=',')
+        train_df.to_csv(abs_path+'/exp_train.csv', sep=',', index=False)
+        test_df.to_csv(abs_path+'/exp_test.csv', sep=',', index=False)
+        data_df[i: i+K+Kt].to_csv(abs_path+'/ExpData.csv', sep=',', index=False)
 
 if __name__ == '__main__':
     main()

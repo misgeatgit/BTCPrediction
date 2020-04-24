@@ -122,7 +122,8 @@ def main():
        for la_days in moses_data.keys():
            cnt = 0
            saving_dir = '{}/LA_{}'.format(dump_dir,la_days)
-           os.mkdir(saving_dir)
+           if not os.path.exists(saving_dir):
+               os.mkdir(saving_dir)
            for name_moses_df in moses_data[la_days]:
                 saving_child_dir = '{}/{}'.format(saving_dir, name_moses_df[0])
                 cnt += 1
