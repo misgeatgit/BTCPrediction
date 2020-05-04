@@ -1,0 +1,1 @@
+and(!$TransactionPerDay_bin2 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin1) 

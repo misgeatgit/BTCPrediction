@@ -1,0 +1,10 @@
+1 and(or($BlockSize_bin5 $TransactionVolume_USD_bin0) !$GoldPrice_bin2) 
+1 and(or($BlockSize_bin5 $TransactionVolume_USD_bin0) !$HashRate_bin1) 
+1 and(or($BlockSize_bin5 $TransactionPerDay_bin3 $TransactionVolume_USD_bin0) !$GoldPrice_bin2) 
+1 and(or($BlockSize_bin5 $TransactionPerDay_bin3 $TransactionVolume_USD_bin0) !$HashRate_bin1) 
+1 and(or($BlockSize_bin5 $TransactionPerDay_bin3 $TransactionVolume_USD_bin0) !$GoldPrice_bin2 !$HashRate_bin1) 
+1 and(or(and(!$HashRate_bin1 $TransactionPerDay_bin3) $BlockSize_bin5 $TransactionVolume_USD_bin0) !$GoldPrice_bin2) 
+1 and(or($BlockSize_bin5 $TransactionPerDay_bin3 $TransactionVolume_USD_bin0) or(!$GoldPrice_bin2 !$HashRate_bin1)) 
+0.857142865657806396 $TransactionVolume_USD_bin0 
+0.857142865657806396 !$TransactionVolume_USD_bin1 
+0.875 or($BlockSize_bin5 $TransactionVolume_USD_bin0) 

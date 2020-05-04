@@ -1,0 +1,1 @@
+or(and(or($MempoolSize_bin7 $TransactionFee_bin0 $TransactionVolume_USD_bin1) or(!$MinningDifficulty_bin1 !$TransactionFee_bin0)) and(!$MempoolCount_bin2 $TransactionPerDay_bin7)) 

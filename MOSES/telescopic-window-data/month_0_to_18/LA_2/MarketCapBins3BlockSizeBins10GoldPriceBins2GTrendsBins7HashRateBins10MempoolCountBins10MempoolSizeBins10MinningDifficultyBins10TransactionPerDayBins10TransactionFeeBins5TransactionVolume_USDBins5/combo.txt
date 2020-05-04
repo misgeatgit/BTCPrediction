@@ -1,0 +1,10 @@
+0.987577438354492188 or(and(!$TransactionPerDay_bin4 $TransactionFee_bin3) and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin1)) 
+1 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin3) !$TransactionVolume_USD_bin1) !$MempoolCount_bin3 !$MempoolSize_bin0) 
+1 or(and(!$GoldPrice_bin0 !$TransactionFee_bin3 !$TransactionVolume_USD_bin1) and(!$TransactionPerDay_bin4 $TransactionFee_bin3)) 
+1 or(and($GoldPrice_bin0 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin1) and(!$TransactionPerDay_bin4 $TransactionFee_bin3)) 
+0.888888895511627197 !$TransactionVolume_USD_bin1 
+0.941176474094390869 or(and(!$TransactionPerDay_bin4 $TransactionFee_bin3) and(!$TransactionPerDay_bin5 !$TransactionVolume_USD_bin1)) 
+0.9375 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin3) !$TransactionVolume_USD_bin1) !$MempoolCount_bin3) 
+0.9375 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin3) !$TransactionVolume_USD_bin1) !$MempoolSize_bin3) 
+0.9375 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin3) !$TransactionVolume_USD_bin1) !$TransactionPerDay_bin5) 
+0.9375 or(and(!$MempoolCount_bin3 !$TransactionVolume_USD_bin1) and(!$TransactionPerDay_bin4 $TransactionFee_bin3)) 

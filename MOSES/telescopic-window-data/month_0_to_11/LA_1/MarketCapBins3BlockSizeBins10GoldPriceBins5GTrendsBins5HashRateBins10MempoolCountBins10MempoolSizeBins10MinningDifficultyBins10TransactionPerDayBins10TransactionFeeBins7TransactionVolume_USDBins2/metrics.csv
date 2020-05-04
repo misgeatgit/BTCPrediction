@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.6,0.79,1.0,0.18,0.3,0.57,or(and(!$BlockSize_bin1 $TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.14,0.3,0.6,or(and(!$GoldPrice_bin3 $TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.14,0.3,0.6,or(and(!$GTrends_bin2 $TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.18,0.33,0.67,or(and(!$MempoolCount_bin2 $TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.18,0.33,0.67,or(and(!$MempoolSize_bin2 $TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.18,0.3,0.57,or(and(!$TransactionPerDay_bin1 $TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.09,0.27,0.5,or(and($TransactionFee_bin1 !$TransactionFee_bin5 !$TransactionVolume_USD_bin0) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.09,0.27,0.5,or(and($TransactionFee_bin1 !$TransactionFee_bin5 $TransactionVolume_USD_bin1) $TransactionFee_bin2) 
+0.6,0.79,1.0,0.14,0.3,0.6,and(or(and($TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) !$GoldPrice_bin3) 
+0.6,0.79,1.0,0.14,0.33,0.75,and(or(and($TransactionFee_bin1 !$TransactionFee_bin5) $TransactionFee_bin2) !$GTrends_bin2) 

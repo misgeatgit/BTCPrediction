@@ -1,0 +1,10 @@
+0.375 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin1) $TransactionFee_bin3) !$TransactionPerDay_bin6) 
+0.375 or(and(!$TransactionPerDay_bin4 $TransactionFee_bin1) and(!$TransactionPerDay_bin6 $TransactionFee_bin3)) 
+0.300000011920928955 $TransactionFee_bin3 
+0.375 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin1) $TransactionFee_bin3) !$TransactionPerDay_bin6 !$TransactionVolume_USD_bin0) 
+0.375 or(and(!$TransactionPerDay_bin4 $TransactionFee_bin1) and(!$TransactionPerDay_bin6 !$TransactionFee_bin1 $TransactionFee_bin3)) 
+0.375 and(or(and(!$TransactionPerDay_bin4 $TransactionFee_bin1) $TransactionFee_bin3) or($TransactionPerDay_bin2 !$TransactionPerDay_bin6)) 
+0.300000011920928955 and(!$TransactionPerDay_bin4 $TransactionFee_bin3) 
+0.300000011920928955 and(!$TransactionFee_bin1 $TransactionFee_bin3) 
+0.300000011920928955 or($TransactionPerDay_bin4 $TransactionFee_bin3) 
+0.300000011920928955 or($TransactionFee_bin0 $TransactionFee_bin3) 

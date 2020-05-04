@@ -1,0 +1,1 @@
+or(and(or(and(!$GTrends_bin3 !$HashRate_bin1 $TransactionVolume_USD_bin6) and(!$TransactionFee_bin5 $TransactionVolume_USD_bin2)) or(!$GoldPrice_bin2 !$TransactionVolume_USD_bin1)) and($GTrends_bin3 !$TransactionVolume_USD_bin2)) 

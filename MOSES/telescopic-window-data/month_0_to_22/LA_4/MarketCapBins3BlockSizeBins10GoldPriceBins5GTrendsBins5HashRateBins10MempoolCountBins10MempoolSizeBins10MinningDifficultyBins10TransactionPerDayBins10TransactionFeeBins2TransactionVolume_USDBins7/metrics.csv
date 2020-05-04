@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.61,0.72,1.0,0.33,0.4,0.13,or(and(!$MarketCap_bin0 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.5,0.64,1.0,0.17,0.53,0.1,or(and($MarketCap_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.56,0.68,1.0,0.67,0.33,0.18,or(and(!$BlockSize_bin5 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.44,0.6,1.0,0.67,0.37,0.19,or(and(!$GoldPrice_bin3 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.61,0.72,1.0,0.67,0.33,0.18,or(and(!$GTrends_bin4 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.56,0.68,1.0,0.67,0.33,0.18,or(and(!$HashRate_bin0 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$MempoolCount_bin9 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$MempoolSize_bin9 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$MinningDifficulty_bin0 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 
+0.5,0.64,1.0,0.17,0.53,0.1,or(and($MinningDifficulty_bin2 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin2) 

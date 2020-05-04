@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.79,0.83,1.0,0.95,0.67,0.69,!$TransactionFee_bin0 
+0.37,0.48,1.0,0.05,0.33,1.0,$TransactionFee_bin1 
+0.37,0.48,1.0,0.48,0.4,0.59,!$TransactionVolume_USD_bin0 
+0.37,0.48,1.0,0.48,0.4,0.59,$TransactionVolume_USD_bin1 
+0.42,0.52,1.0,0.9,0.63,0.68,and(!$TransactionFee_bin0 !$TransactionFee_bin1) 
+0.63,0.7,1.0,0.81,0.63,0.71,and(!$TransactionFee_bin0 !$TransactionFee_bin3) 
+0.79,0.83,1.0,0.86,0.7,0.75,and(!$TransactionFee_bin0 !$TransactionFee_bin6) 
+0.37,0.48,1.0,0.05,0.33,1.0,and($TransactionFee_bin1 !$TransactionFee_bin5) 
+0.37,0.48,1.0,0.38,0.43,0.67,and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0) 
+0.37,0.48,1.0,0.24,0.23,0.42,and(!$TransactionFee_bin5 !$TransactionVolume_USD_bin0) 

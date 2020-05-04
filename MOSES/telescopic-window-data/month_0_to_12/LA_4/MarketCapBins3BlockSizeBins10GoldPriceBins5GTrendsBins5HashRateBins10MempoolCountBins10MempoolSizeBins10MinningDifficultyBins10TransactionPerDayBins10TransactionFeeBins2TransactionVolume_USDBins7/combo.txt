@@ -1,0 +1,10 @@
+1 and(!$GoldPrice_bin4 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0) 
+1 and(!$TransactionPerDay_bin4 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0) 
+1 and(!$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin1) 
+1 and(!$TransactionPerDay_bin0 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin1) 
+1 and(or($MempoolCount_bin3 !$TransactionPerDay_bin4) !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0) 
+0.933333337306976318 and(!$BlockSize_bin1 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0) 
+0.923076927661895752 and(!$BlockSize_bin2 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0) 
+0.882352948188781738 !$TransactionVolume_USD_bin1 
+0.916666686534881592 and(!$HashRate_bin2 !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin0) 
+0.875 !$TransactionVolume_USD_bin0 

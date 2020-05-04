@@ -1,0 +1,1 @@
+and(!$GoldPrice_bin4 !$HashRate_bin6 !$HashRate_bin7 !$MempoolCount_bin4 !$TransactionPerDay_bin4 !$TransactionPerDay_bin6 !$TransactionFee_bin1) 

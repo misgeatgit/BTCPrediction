@@ -1,0 +1,10 @@
+0.947368383407592773 !$TransactionVolume_USD_bin1 
+1 and(or($TransactionPerDay_bin2 !$TransactionFee_bin0 !$TransactionVolume_USD_bin1) !$BlockSize_bin0) 
+1 and(or($TransactionPerDay_bin2 !$TransactionFee_bin0 !$TransactionVolume_USD_bin1) !$GTrends_bin4) 
+1 and(or($TransactionPerDay_bin2 !$TransactionFee_bin0 !$TransactionVolume_USD_bin1) !$HashRate_bin1) 
+1 and(or($TransactionPerDay_bin2 !$TransactionFee_bin0 !$TransactionVolume_USD_bin1) !$MempoolCount_bin0) 
+1 and(or($TransactionPerDay_bin2 !$TransactionFee_bin0 !$TransactionVolume_USD_bin1) !$MempoolSize_bin0) 
+1 and(or($TransactionPerDay_bin2 !$TransactionFee_bin0 !$TransactionVolume_USD_bin1) !$TransactionVolume_USD_bin0) 
+0.952380955219268799 or($TransactionPerDay_bin2 !$TransactionVolume_USD_bin1) 
+0.947368383407592773 and(!$TransactionVolume_USD_bin1 !$TransactionVolume_USD_bin5) 
+0.947368383407592773 or($TransactionPerDay_bin5 !$TransactionVolume_USD_bin1) 

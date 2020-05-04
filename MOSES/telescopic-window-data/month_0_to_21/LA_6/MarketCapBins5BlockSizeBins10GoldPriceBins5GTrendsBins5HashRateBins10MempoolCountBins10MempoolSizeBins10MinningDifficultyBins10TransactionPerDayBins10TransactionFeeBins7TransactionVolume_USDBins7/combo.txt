@@ -1,0 +1,10 @@
+0.285714268684387207 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin6) 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionVolume_USD_bin3) 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionVolume_USD_bin5) 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionVolume_USD_bin6) 
+0.222222223877906799 or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) 
+0.193571358919143677 $TransactionVolume_USD_bin4 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionPerDay_bin9 !$TransactionVolume_USD_bin5) 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionVolume_USD_bin1 !$TransactionVolume_USD_bin5) 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin6) 
+0.25 and(or($TransactionPerDay_bin7 $TransactionVolume_USD_bin4) or($TransactionPerDay_bin9 !$TransactionVolume_USD_bin6)) 

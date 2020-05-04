@@ -1,0 +1,10 @@
+1 or($TransactionPerDay_bin0 $TransactionVolume_USD_bin0) 
+1 or($TransactionPerDay_bin0 !$TransactionVolume_USD_bin1) 
+1 or($TransactionPerDay_bin8 $TransactionVolume_USD_bin0) 
+0.89999997615814209 or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.860238075256347656 $TransactionVolume_USD_bin0 
+0.860238075256347656 !$TransactionVolume_USD_bin1 
+0.860238075256347656 and(!$MinningDifficulty_bin9 $TransactionVolume_USD_bin0) 
+0.860238075256347656 and(!$TransactionPerDay_bin9 !$TransactionVolume_USD_bin1) 
+0.860238075256347656 or($MinningDifficulty_bin9 !$TransactionVolume_USD_bin1) 
+0.860238075256347656 or($TransactionFee_bin0 $TransactionVolume_USD_bin0) 

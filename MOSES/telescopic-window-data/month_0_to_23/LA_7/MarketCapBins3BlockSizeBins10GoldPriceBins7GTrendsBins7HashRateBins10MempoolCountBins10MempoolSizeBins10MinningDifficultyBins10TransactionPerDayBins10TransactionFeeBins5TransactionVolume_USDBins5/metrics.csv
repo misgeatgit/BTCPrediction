@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+1.0,0.91,0.71,0.29,0.43,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) !$MarketCap_bin2) 
+1.0,0.91,0.71,0.42,0.53,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) !$BlockSize_bin9) 
+1.0,0.91,0.71,0.25,0.4,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) !$MarketCap_bin2 !$BlockSize_bin1) 
+1.0,0.91,0.71,0.42,0.53,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) or($MarketCap_bin0 !$BlockSize_bin9)) 
+1.0,0.91,0.71,0.42,0.53,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) or(!$MarketCap_bin1 !$BlockSize_bin3)) 
+1.0,0.86,0.63,0.33,0.47,1.0,or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6) 
+1.0,0.86,0.63,0.42,0.53,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) !$GoldPrice_bin2) 
+1.0,0.82,0.56,0.33,0.47,1.0,or($GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) 
+1.0,0.86,0.63,0.29,0.43,1.0,and(or(and($TransactionPerDay_bin8 !$TransactionVolume_USD_bin2) $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) or(!$MarketCap_bin2 $GoldPrice_bin2)) 
+1.0,0.82,0.56,0.42,0.47,0.83,or($BlockSize_bin0 $GoldPrice_bin1 $TransactionPerDay_bin6 $TransactionVolume_USD_bin3) 

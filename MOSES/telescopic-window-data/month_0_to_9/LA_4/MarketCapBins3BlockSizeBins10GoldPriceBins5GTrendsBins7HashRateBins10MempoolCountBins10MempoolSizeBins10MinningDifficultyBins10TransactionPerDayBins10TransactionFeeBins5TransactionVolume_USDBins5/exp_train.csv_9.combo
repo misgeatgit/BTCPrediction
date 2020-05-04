@@ -1,0 +1,1 @@
+and(or($TransactionPerDay_bin8 !$TransactionFee_bin0 $TransactionVolume_USD_bin3) !$BlockSize_bin0 !$TransactionPerDay_bin6) 

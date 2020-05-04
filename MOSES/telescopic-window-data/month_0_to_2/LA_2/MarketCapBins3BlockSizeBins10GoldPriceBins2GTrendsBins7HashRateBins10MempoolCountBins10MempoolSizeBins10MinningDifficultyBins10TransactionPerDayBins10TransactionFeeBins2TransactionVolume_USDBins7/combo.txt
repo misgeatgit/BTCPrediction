@@ -1,0 +1,10 @@
+0.987577438354492188 or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $MarketCap_bin0) 
+0.854046046733856201 and(or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $MarketCap_bin0 $TransactionVolume_USD_bin6) !$MinningDifficulty_bin0) 
+0.854046046733856201 or(and(or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin6) !$MinningDifficulty_bin0) $MarketCap_bin0) 
+0.854046046733856201 or(and(or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin6) $TransactionFee_bin0) $MarketCap_bin0) 
+0.800000011920928955 or(and(or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin6) !$TransactionPerDay_bin8) $MarketCap_bin0) 
+0.800000011920928955 or(and(or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $MarketCap_bin0 $TransactionVolume_USD_bin6) !$TransactionPerDay_bin8) $MarketCap_bin0) 
+0.699895381927490234 $MarketCap_bin0 
+0.75 or(and(!$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $MarketCap_bin0 $TransactionVolume_USD_bin6) 
+0.699999988079071045 or($MarketCap_bin0 $TransactionVolume_USD_bin6) 
+0.75 or(and(!$BlockSize_bin2 !$MinningDifficulty_bin3 $TransactionVolume_USD_bin2) $MarketCap_bin0 $TransactionVolume_USD_bin6) 

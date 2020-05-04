@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.64,0.68,1.0,0.64,0.57,0.74,and(!$MarketCap_bin2 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.68,0.72,1.0,0.82,0.7,0.78,and(!$BlockSize_bin5 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.36,0.44,1.0,0.0,0.27,-1.0,and($GoldPrice_bin0 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.68,0.72,1.0,0.68,0.7,0.88,and(!$GoldPrice_bin2 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.68,0.72,1.0,0.68,0.67,0.83,and(!$GTrends_bin4 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.73,0.76,1.0,0.77,0.7,0.81,and(!$HashRate_bin5 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.64,0.68,1.0,0.77,0.67,0.77,and(!$MempoolCount_bin6 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.64,0.68,1.0,0.77,0.67,0.77,and(!$MempoolSize_bin6 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.73,0.76,1.0,0.77,0.77,0.89,and(!$MinningDifficulty_bin3 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 
+0.73,0.76,1.0,0.64,0.57,0.74,and(!$TransactionPerDay_bin8 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin5) 

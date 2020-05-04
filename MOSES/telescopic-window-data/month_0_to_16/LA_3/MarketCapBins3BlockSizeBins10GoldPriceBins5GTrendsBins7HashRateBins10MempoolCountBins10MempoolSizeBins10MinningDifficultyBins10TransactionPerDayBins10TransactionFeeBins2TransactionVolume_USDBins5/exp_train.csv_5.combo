@@ -1,0 +1,1 @@
+or(and(!$GTrends_bin5 !$TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin4) $MarketCap_bin0) 

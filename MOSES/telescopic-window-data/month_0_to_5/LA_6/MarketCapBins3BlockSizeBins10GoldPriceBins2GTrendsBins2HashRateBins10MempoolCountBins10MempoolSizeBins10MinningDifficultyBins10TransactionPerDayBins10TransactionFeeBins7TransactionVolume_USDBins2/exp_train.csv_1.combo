@@ -1,0 +1,1 @@
+or(and(!$HashRate_bin2 $TransactionFee_bin5) and(!$HashRate_bin4 !$MempoolSize_bin1 $MinningDifficulty_bin2 $TransactionVolume_USD_bin0)) 

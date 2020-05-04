@@ -1,0 +1,10 @@
+0.285714268684387207 and(or($TransactionVolume_USD_bin1 $TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin4) !$MempoolSize_bin4) 
+0.199999988079071045 !$TransactionVolume_USD_bin4 
+0.25 and(or($TransactionVolume_USD_bin1 $TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin4) !$MempoolSize_bin7) 
+0.25 and(or($TransactionVolume_USD_bin1 $TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin4) !$TransactionPerDay_bin9) 
+0.199999988079071045 and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin4) 
+0.199999988079071045 or($HashRate_bin8 !$TransactionVolume_USD_bin4) 
+0.199999988079071045 or($TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin4) 
+0.199999988079071045 or($TransactionVolume_USD_bin1 !$TransactionVolume_USD_bin4) 
+0.199999988079071045 or($TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin4) 
+0.199999988079071045 or($TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin4) 

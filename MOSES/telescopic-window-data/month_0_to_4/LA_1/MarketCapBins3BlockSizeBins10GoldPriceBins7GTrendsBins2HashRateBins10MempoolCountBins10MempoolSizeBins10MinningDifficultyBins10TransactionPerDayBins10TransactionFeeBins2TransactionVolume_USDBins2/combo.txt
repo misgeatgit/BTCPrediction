@@ -1,0 +1,10 @@
+1 and(!$MarketCap_bin1 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+1 and(!$TransactionPerDay_bin0 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.916666686534881592 and(!$HashRate_bin6 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.909090936183929443 and(!$GoldPrice_bin0 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.909090936183929443 and(!$MempoolCount_bin3 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.909090936183929443 and(!$MempoolSize_bin3 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.900000035762786865 and(!$BlockSize_bin0 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.857142865657806396 $TransactionFee_bin0 
+0.857142865657806396 !$TransactionFee_bin1 
+0.916666686534881592 and(or(!$MarketCap_bin1 !$MinningDifficulty_bin0) !$TransactionPerDay_bin2 !$TransactionFee_bin1) 

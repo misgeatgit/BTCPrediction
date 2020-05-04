@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.78,0.91,1.0,0.57,0.53,0.27,or(and(!$BlockSize_bin4 !$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) 
+0.78,0.91,1.0,0.57,0.53,0.27,or(and(!$GoldPrice_bin1 !$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) 
+0.78,0.91,1.0,0.57,0.53,0.27,or(and(!$HashRate_bin3 !$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) 
+0.78,0.91,1.0,0.43,0.5,0.21,or(and(!$MempoolCount_bin4 !$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) 
+0.78,0.91,1.0,0.43,0.5,0.21,or(and(!$MempoolSize_bin4 !$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) 
+0.78,0.91,1.0,0.57,0.53,0.27,and(or(and(!$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) !$BlockSize_bin4) 
+0.78,0.91,1.0,0.43,0.5,0.21,and(or(and(!$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) !$GoldPrice_bin1) 
+0.78,0.91,1.0,0.57,0.53,0.27,and(or(and(!$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) !$HashRate_bin3) 
+0.78,0.91,1.0,0.43,0.5,0.21,and(or(and(!$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) !$MempoolCount_bin4) 
+0.78,0.91,1.0,0.43,0.5,0.21,and(or(and(!$TransactionPerDay_bin6 !$TransactionPerDay_bin8 !$TransactionFee_bin3 $TransactionVolume_USD_bin2) $TransactionPerDay_bin5 $TransactionFee_bin1) !$MempoolSize_bin4) 

@@ -1,0 +1,10 @@
+1 and(or($MarketCap_bin0 $TransactionFee_bin0) !$HashRate_bin1) 
+0.909090936183929443 or($MarketCap_bin0 $TransactionFee_bin0) 
+0.888888895511627197 $MarketCap_bin0 
+0.909090936183929443 and(or($MarketCap_bin0 $TransactionFee_bin0) !$GoldPrice_bin0) 
+0.909090936183929443 and(or($MarketCap_bin0 $TransactionFee_bin0) !$HashRate_bin8) 
+0.909090936183929443 or(and(!$GoldPrice_bin0 $TransactionFee_bin0) $MarketCap_bin0) 
+0.909090936183929443 or(and(!$GoldPrice_bin1 $TransactionFee_bin0) $MarketCap_bin0) 
+0.909090936183929443 or(and(!$HashRate_bin1 $TransactionFee_bin0) $MarketCap_bin0) 
+0.909090936183929443 or(and(!$HashRate_bin8 $TransactionFee_bin0) $MarketCap_bin0) 
+0.909090936183929443 or(and($TransactionFee_bin0 !$TransactionFee_bin1) $MarketCap_bin0) 

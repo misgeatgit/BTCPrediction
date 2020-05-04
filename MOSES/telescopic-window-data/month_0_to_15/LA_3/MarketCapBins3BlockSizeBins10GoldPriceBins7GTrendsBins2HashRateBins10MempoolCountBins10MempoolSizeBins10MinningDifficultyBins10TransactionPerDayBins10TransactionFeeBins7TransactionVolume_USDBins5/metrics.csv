@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.62,0.81,1.0,0.5,0.5,0.73,and(or(and(!$MempoolCount_bin1 !$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) and($TransactionFee_bin0 $TransactionFee_bin4 $TransactionFee_bin5)) !$MinningDifficulty_bin0) 
+0.62,0.81,1.0,0.5,0.5,0.73,and(or(and(!$MempoolSize_bin1 !$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) and($TransactionFee_bin0 $TransactionFee_bin4 $TransactionFee_bin5)) !$MinningDifficulty_bin0) 
+0.62,0.81,1.0,0.5,0.5,0.73,and(or(and($TransactionFee_bin0 $TransactionFee_bin4 $TransactionFee_bin5) and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3)) !$MempoolCount_bin1 !$MinningDifficulty_bin0) 
+0.62,0.81,1.0,0.5,0.5,0.73,and(or(and($TransactionFee_bin0 $TransactionFee_bin4 $TransactionFee_bin5) and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3)) !$MempoolSize_bin1 !$MinningDifficulty_bin0) 
+0.62,0.77,0.89,0.59,0.5,0.68,and(or(and(!$MinningDifficulty_bin0 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) $TransactionFee_bin6) !$TransactionFee_bin4) 
+0.62,0.77,0.89,0.64,0.53,0.7,and(or(and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) $TransactionFee_bin5) !$MinningDifficulty_bin0) 
+0.54,0.73,0.88,0.45,0.43,0.67,and(!$MinningDifficulty_bin0 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) 
+0.77,0.85,0.91,0.59,0.53,0.72,and(or(and($TransactionFee_bin0 $TransactionFee_bin4) and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) $HashRate_bin1) !$MinningDifficulty_bin0) 
+0.77,0.85,0.91,0.68,0.6,0.75,or(and(or(and($TransactionFee_bin0 $TransactionFee_bin4) and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3)) !$MinningDifficulty_bin0) $TransactionPerDay_bin4) 
+0.77,0.85,0.91,0.68,0.6,0.75,or(and(or(and($TransactionFee_bin0 $TransactionFee_bin5) and(!$TransactionFee_bin4 !$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3)) !$MinningDifficulty_bin0) $TransactionPerDay_bin4) 

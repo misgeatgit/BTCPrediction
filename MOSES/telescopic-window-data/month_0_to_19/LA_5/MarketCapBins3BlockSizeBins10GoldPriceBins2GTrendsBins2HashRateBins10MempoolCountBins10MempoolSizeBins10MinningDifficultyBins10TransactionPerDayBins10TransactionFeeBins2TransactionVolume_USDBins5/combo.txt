@@ -1,0 +1,10 @@
+0.971829056739807129 or(!$TransactionFee_bin0 $TransactionVolume_USD_bin2) 
+0.947368443012237549 !$MempoolCount_bin0 
+0.947368443012237549 and(!$MempoolCount_bin0 !$TransactionVolume_USD_bin3) 
+0.947368443012237549 or($HashRate_bin9 !$MempoolCount_bin0) 
+0.947368443012237549 or(!$MempoolCount_bin0 $TransactionVolume_USD_bin2) 
+0.947368443012237549 or(!$MempoolCount_bin0 $TransactionVolume_USD_bin4) 
+0.916666686534881592 !$TransactionVolume_USD_bin0 
+0.900000035762786865 $TransactionVolume_USD_bin1 
+0.916666686534881592 and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) 
+0.916666686534881592 and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin4) 

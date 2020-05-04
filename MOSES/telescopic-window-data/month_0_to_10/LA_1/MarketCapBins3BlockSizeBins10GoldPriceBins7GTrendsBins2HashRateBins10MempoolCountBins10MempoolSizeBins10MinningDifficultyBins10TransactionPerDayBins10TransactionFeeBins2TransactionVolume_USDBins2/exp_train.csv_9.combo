@@ -1,0 +1,1 @@
+and(!$GoldPrice_bin0 !$MempoolCount_bin1 !$MempoolSize_bin9 !$TransactionPerDay_bin1 !$TransactionPerDay_bin2 !$TransactionPerDay_bin6 $TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin1) 

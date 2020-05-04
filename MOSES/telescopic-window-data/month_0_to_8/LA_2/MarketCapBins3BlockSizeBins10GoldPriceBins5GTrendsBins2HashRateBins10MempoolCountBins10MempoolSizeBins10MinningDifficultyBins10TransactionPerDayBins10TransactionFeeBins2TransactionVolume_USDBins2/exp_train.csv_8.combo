@@ -1,0 +1,1 @@
+and(or(!$BlockSize_bin2 !$MempoolCount_bin2) or($HashRate_bin7 !$TransactionVolume_USD_bin1)) 

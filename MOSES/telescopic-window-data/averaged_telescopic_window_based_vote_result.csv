@@ -1,0 +1,15 @@
+look_ahead_days,vote_based_on,training_accuracy,training_precision,test_accuracy,test_precision
+1.0,accuracy,0.68,1.0,0.5,0.5
+1.0,precision,0.67,1.0,0.49,0.5
+2.0,accuracy,0.71,0.99,0.53,0.61
+2.0,precision,0.69,1.0,0.51,0.63
+3.0,accuracy,0.72,1.0,0.55,0.67
+3.0,precision,0.69,1.0,0.52,0.7
+4.0,accuracy,0.7,1.0,0.54,0.69
+4.0,precision,0.69,1.0,0.49,0.64
+5.0,accuracy,0.7,0.98,0.56,0.7
+5.0,precision,0.68,0.94,0.51,0.68
+6.0,accuracy,0.72,0.97,0.59,0.66
+6.0,precision,0.67,0.97,0.51,0.68
+7.0,accuracy,0.73,0.93,0.61,0.76
+7.0,precision,0.68,0.94,0.5,0.83

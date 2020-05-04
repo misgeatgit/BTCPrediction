@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.89,0.91,1.0,1.0,0.6,0.59,!$MempoolCount_bin0 
+0.89,0.91,1.0,0.76,0.7,0.72,and(!$MempoolCount_bin0 !$TransactionVolume_USD_bin3) 
+0.89,0.91,1.0,1.0,0.57,0.57,or($HashRate_bin8 !$MempoolCount_bin0) 
+0.89,0.91,1.0,1.0,0.6,0.59,or(!$MempoolCount_bin0 $TransactionVolume_USD_bin2) 
+0.89,0.91,1.0,1.0,0.57,0.57,or(!$MempoolCount_bin0 $TransactionVolume_USD_bin4) 
+0.47,0.5,0.9,1.0,0.57,0.57,!$TransactionVolume_USD_bin0 
+0.42,0.45,0.89,0.12,0.5,1.0,$TransactionVolume_USD_bin1 
+0.32,0.41,1.0,0.76,0.47,0.52,or(!$TransactionFee_bin0 $TransactionVolume_USD_bin2) 
+0.47,0.5,0.9,0.76,0.67,0.68,and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) 
+0.47,0.5,0.9,0.82,0.63,0.64,and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin4) 

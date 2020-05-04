@@ -1,0 +1,1 @@
+or(and(or(and(!$HashRate_bin1 $TransactionFee_bin2) and(!$TransactionPerDay_bin8 $TransactionFee_bin0 $TransactionVolume_USD_bin2)) or(!$GTrends_bin3 !$TransactionPerDay_bin8) !$BlockSize_bin5) and(!$MarketCap_bin1 !$MarketCap_bin2)) 

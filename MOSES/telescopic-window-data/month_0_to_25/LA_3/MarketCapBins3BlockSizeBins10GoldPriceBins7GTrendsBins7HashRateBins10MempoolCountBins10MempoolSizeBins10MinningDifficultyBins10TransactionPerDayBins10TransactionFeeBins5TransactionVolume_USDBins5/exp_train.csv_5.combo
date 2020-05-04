@@ -1,0 +1,1 @@
+and(or($MempoolCount_bin7 !$TransactionVolume_USD_bin4) !$BlockSize_bin1 !$BlockSize_bin3 !$MempoolSize_bin2 !$TransactionFee_bin3) 

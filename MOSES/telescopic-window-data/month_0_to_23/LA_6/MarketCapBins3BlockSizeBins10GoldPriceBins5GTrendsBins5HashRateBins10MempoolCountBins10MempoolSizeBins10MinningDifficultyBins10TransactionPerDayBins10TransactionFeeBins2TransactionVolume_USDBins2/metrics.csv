@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+1.0,0.91,0.71,0.39,0.5,0.9,or(and(!$MarketCap_bin2 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0 $MempoolCount_bin1) 
+1.0,0.87,0.63,0.65,0.57,0.75,or(and(!$MarketCap_bin2 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MarketCap_bin0 $MempoolCount_bin0) 
+0.8,0.83,0.57,0.57,0.57,0.81,and(or(and(!$TransactionPerDay_bin1 !$TransactionPerDay_bin8 $TransactionVolume_USD_bin1) $MempoolCount_bin0) !$BlockSize_bin3) 
+1.0,0.87,0.63,0.65,0.57,0.75,or(and($MarketCap_bin0 !$MarketCap_bin1) and(!$MarketCap_bin2 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0) 
+1.0,0.87,0.63,0.35,0.47,0.89,or(and(!$MarketCap_bin1 $HashRate_bin2) and(!$MarketCap_bin2 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0) 
+0.8,0.83,0.57,0.43,0.53,0.91,or(and(!$BlockSize_bin3 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0) 
+0.8,0.83,0.57,0.43,0.53,0.91,or(and(!$HashRate_bin2 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0) 
+0.8,0.83,0.57,0.43,0.53,0.91,and(or(and(!$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0) !$BlockSize_bin3) 
+0.8,0.83,0.57,0.43,0.53,0.91,and(or(and(!$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $MempoolCount_bin0) !$HashRate_bin2) 
+0.8,0.83,0.57,0.43,0.53,0.91,or(and(!$MarketCap_bin2 !$TransactionPerDay_bin1 !$TransactionPerDay_bin8 !$TransactionPerDay_bin9 $TransactionVolume_USD_bin1) $HashRate_bin5 $MempoolCount_bin0) 

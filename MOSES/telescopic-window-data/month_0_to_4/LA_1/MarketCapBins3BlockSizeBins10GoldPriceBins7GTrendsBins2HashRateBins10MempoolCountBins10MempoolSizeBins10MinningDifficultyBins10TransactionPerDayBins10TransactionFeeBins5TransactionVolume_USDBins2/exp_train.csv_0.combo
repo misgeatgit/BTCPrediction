@@ -1,0 +1,1 @@
+and(or(and(or(!$MempoolCount_bin3 !$TransactionPerDay_bin0) or(!$TransactionPerDay_bin4 $TransactionVolume_USD_bin1) or($TransactionPerDay_bin4 $TransactionFee_bin0)) $TransactionFee_bin1) !$HashRate_bin6) 

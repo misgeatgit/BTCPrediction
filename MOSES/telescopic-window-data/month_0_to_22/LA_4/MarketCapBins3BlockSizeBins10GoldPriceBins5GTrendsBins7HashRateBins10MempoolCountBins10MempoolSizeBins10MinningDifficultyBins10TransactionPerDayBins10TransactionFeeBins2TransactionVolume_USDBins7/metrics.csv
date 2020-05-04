@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.56,0.68,1.0,0.33,0.33,0.11,or(and(!$MarketCap_bin0 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$BlockSize_bin5 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.44,0.6,1.0,0.67,0.37,0.19,or(and(!$GoldPrice_bin3 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.61,0.72,1.0,0.67,0.33,0.18,or(and(!$GTrends_bin6 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$HashRate_bin0 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$MempoolCount_bin9 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.5,0.64,1.0,0.67,0.33,0.18,or(and(!$MempoolSize_bin9 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.56,0.68,1.0,0.5,0.33,0.15,or(and(!$TransactionPerDay_bin6 !$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) 
+0.44,0.6,1.0,0.17,0.4,0.07,and(or(and(!$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$MarketCap_bin0) 
+0.5,0.64,1.0,0.67,0.33,0.18,and(or(and(!$TransactionVolume_USD_bin3 !$TransactionVolume_USD_bin5 !$TransactionVolume_USD_bin6) $TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$BlockSize_bin5) 

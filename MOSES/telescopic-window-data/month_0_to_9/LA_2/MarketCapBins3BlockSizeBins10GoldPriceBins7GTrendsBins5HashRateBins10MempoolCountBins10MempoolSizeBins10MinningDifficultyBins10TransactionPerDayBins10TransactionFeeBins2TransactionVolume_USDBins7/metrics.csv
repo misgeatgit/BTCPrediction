@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.47,0.67,1.0,0.45,0.47,0.64,or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$GoldPrice_bin3 !$HashRate_bin7 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) 
+0.47,0.67,1.0,0.45,0.47,0.64,or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$HashRate_bin7 !$HashRate_bin8 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) 
+0.47,0.67,1.0,0.5,0.5,0.67,or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$HashRate_bin7 !$MempoolCount_bin3 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) 
+0.47,0.67,1.0,0.5,0.5,0.67,or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$HashRate_bin7 !$MempoolSize_bin3 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) 
+0.47,0.67,1.0,0.55,0.53,0.69,or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$MempoolCount_bin3 !$TransactionPerDay_bin2 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) 
+0.47,0.67,1.0,0.4,0.47,0.67,and(or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$GoldPrice_bin3 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) !$HashRate_bin7) 
+0.47,0.67,1.0,0.45,0.5,0.69,and(or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$GoldPrice_bin3 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) !$TransactionPerDay_bin2) 
+0.47,0.67,1.0,0.4,0.5,0.73,and(or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$HashRate_bin7 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) !$HashRate_bin8) 
+0.47,0.67,1.0,0.4,0.47,0.67,and(or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$HashRate_bin8 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) !$HashRate_bin7) 
+0.47,0.67,1.0,0.45,0.5,0.69,and(or(and(or($TransactionPerDay_bin9 $TransactionVolume_USD_bin0) !$HashRate_bin8 !$TransactionVolume_USD_bin5) $TransactionVolume_USD_bin3 $TransactionVolume_USD_bin6) !$TransactionPerDay_bin2) 

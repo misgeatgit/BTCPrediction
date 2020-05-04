@@ -1,0 +1,1 @@
+and(or(and(or(and($MempoolCount_bin5 $MempoolSize_bin5) $MempoolCount_bin0 $TransactionVolume_USD_bin4) !$TransactionFee_bin6) $TransactionFee_bin3) !$MempoolCount_bin8) 

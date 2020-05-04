@@ -1,0 +1,1 @@
+or(and(!$MarketCap_bin1 !$TransactionPerDay_bin2 !$TransactionFee_bin1) $TransactionPerDay_bin4) 

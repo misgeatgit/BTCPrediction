@@ -1,0 +1,1 @@
+and(!$MempoolSize_bin3 !$TransactionPerDay_bin2 !$TransactionFee_bin1) 

@@ -1,0 +1,1 @@
+and(!$TransactionPerDay_bin1 !$TransactionFee_bin1) 

@@ -1,0 +1,10 @@
+1 and(or($TransactionFee_bin3 $TransactionFee_bin6) !$TransactionVolume_USD_bin4) 
+1 and(or($TransactionFee_bin3 $TransactionFee_bin6) !$TransactionFee_bin0 !$TransactionVolume_USD_bin4) 
+0.909090936183929443 or($TransactionFee_bin3 $TransactionFee_bin6) 
+0.888888895511627197 $TransactionFee_bin6 
+0.923076927661895752 or($TransactionFee_bin3 $TransactionFee_bin6 $TransactionVolume_USD_bin4) 
+0.916666686534881592 or($TransactionFee_bin3 $TransactionFee_bin6 $TransactionVolume_USD_bin1) 
+0.916666686534881592 or($TransactionFee_bin3 $TransactionFee_bin6 $TransactionVolume_USD_bin2) 
+0.909090936183929443 or($TransactionFee_bin0 $TransactionFee_bin3 $TransactionFee_bin6) 
+0.909090936183929443 or($TransactionFee_bin1 $TransactionFee_bin3 $TransactionFee_bin6) 
+0.909090936183929443 or($TransactionFee_bin2 $TransactionFee_bin3 $TransactionFee_bin6) 

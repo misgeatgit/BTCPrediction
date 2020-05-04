@@ -1,0 +1,1 @@
+and(or(and(!$GTrends_bin3 !$TransactionPerDay_bin1) $TransactionPerDay_bin8) $TransactionVolume_USD_bin0) 

@@ -1,0 +1,10 @@
+1 and(!$TransactionPerDay_bin5 !$TransactionFee_bin1) 
+1 and(!$TransactionPerDay_bin6 $TransactionFee_bin0) 
+1 and(!$TransactionPerDay_bin9 !$TransactionVolume_USD_bin1) 
+1 and(!$TransactionFee_bin1 !$TransactionVolume_USD_bin1) 
+0.941176474094390869 and(!$TransactionPerDay_bin4 !$TransactionPerDay_bin7) 
+0.9375 and(!$TransactionPerDay_bin3 $TransactionVolume_USD_bin0) 
+0.9375 and(!$TransactionPerDay_bin4 !$TransactionPerDay_bin9) 
+0.904689908027648926 and(!$TransactionPerDay_bin2 !$TransactionFee_bin1) 
+0.849134385585784912 !$TransactionPerDay_bin9 
+0.849134385585784912 and(!$TransactionPerDay_bin2 $TransactionVolume_USD_bin0) 

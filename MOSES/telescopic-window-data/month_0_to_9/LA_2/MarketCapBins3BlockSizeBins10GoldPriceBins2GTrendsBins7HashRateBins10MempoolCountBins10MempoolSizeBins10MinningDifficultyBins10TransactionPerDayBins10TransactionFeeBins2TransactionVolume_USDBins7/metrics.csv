@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.65,0.78,1.0,0.7,0.57,0.67,or(and(!$GTrends_bin0 !$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) 
+0.65,0.78,1.0,0.7,0.57,0.67,and(or(and(!$GTrends_bin0 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) !$HashRate_bin4) 
+0.65,0.78,1.0,0.7,0.57,0.67,and(or(and(!$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) !$GTrends_bin0) 
+0.65,0.78,1.0,0.7,0.57,0.67,and(or(and(!$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) !$GTrends_bin0 !$HashRate_bin4) 
+0.59,0.74,1.0,0.6,0.5,0.63,or(and(!$BlockSize_bin5 !$GTrends_bin0 !$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) 
+0.65,0.78,1.0,0.8,0.63,0.7,and(or(and(!$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) or($MarketCap_bin1 !$GTrends_bin0)) 
+0.65,0.78,1.0,0.75,0.6,0.68,and(or(and(!$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) or(!$GTrends_bin0 $MempoolSize_bin4)) 
+0.76,0.85,1.0,0.7,0.57,0.67,and(or(and(!$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) or(!$GTrends_bin0 $MempoolSize_bin6)) 
+0.76,0.85,1.0,0.7,0.57,0.67,and(or(and(!$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin3) or(!$GTrends_bin0 $MempoolSize_bin6) !$HashRate_bin4) 
+0.82,0.85,0.93,0.65,0.57,0.68,and(!$HashRate_bin4 !$TransactionPerDay_bin2 !$TransactionPerDay_bin5 !$TransactionVolume_USD_bin4) 

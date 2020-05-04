@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.6,0.74,1.0,0.41,0.47,0.75,and(or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5 !$GTrends_bin4) 
+0.53,0.7,1.0,0.32,0.43,0.78,and(or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5 !$GTrends_bin3 !$GTrends_bin4) 
+0.6,0.74,1.0,0.36,0.43,0.73,and(or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5 !$GTrends_bin4 !$TransactionVolume_USD_bin1) 
+0.47,0.65,1.0,0.14,0.33,0.75,and(or($GoldPrice_bin6 $TransactionFee_bin1) or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GTrends_bin4) 
+0.47,0.65,1.0,0.14,0.33,0.75,and(or($GoldPrice_bin6 $TransactionFee_bin1) or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5 !$GTrends_bin4) 
+0.47,0.65,1.0,0.14,0.33,0.75,and(or($GoldPrice_bin6 $TransactionFee_bin1) or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GTrends_bin4 !$TransactionVolume_USD_bin1) 
+0.67,0.74,0.91,0.36,0.43,0.73,and(!$GoldPrice_bin5 $TransactionVolume_USD_bin0) 
+0.47,0.65,1.0,0.14,0.33,0.75,and(or($GoldPrice_bin6 $TransactionFee_bin1) or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5 !$GTrends_bin4 !$TransactionVolume_USD_bin1) 
+0.67,0.74,0.91,0.45,0.5,0.77,and(or($TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5) 
+0.73,0.78,0.92,0.45,0.5,0.77,and(or($HashRate_bin2 $TransactionPerDay_bin2 $TransactionVolume_USD_bin0) !$GoldPrice_bin5) 

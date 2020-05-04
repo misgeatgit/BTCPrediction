@@ -1,0 +1,1 @@
+or(and(or($BlockSize_bin7 $GoldPrice_bin4) $HashRate_bin9) $GoldPrice_bin4 $TransactionVolume_USD_bin1) 

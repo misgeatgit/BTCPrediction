@@ -1,0 +1,1 @@
+or(and(!$GTrends_bin3 !$TransactionPerDay_bin0) $TransactionPerDay_bin9) 

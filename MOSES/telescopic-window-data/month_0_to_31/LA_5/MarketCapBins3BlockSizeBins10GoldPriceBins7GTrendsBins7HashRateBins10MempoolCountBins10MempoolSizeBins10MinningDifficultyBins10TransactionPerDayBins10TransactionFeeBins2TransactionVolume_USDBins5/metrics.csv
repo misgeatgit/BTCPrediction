@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+1.0,0.88,0.63,0.42,0.7,0.71,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) $TransactionPerDay_bin1 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.42,0.67,0.63,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) $TransactionPerDay_bin1 $TransactionPerDay_bin7 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.92,0.71,0.33,0.6,0.5,and(or(and(or($TransactionPerDay_bin1 $TransactionPerDay_bin5) $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $BlockSize_bin0 $MempoolCount_bin3 $TransactionVolume_USD_bin0) !$GTrends_bin1 !$MempoolSize_bin2) 
+1.0,0.88,0.63,0.33,0.6,0.5,and(or(and(or($TransactionPerDay_bin1 $TransactionPerDay_bin5) $TransactionVolume_USD_bin1) $BlockSize_bin0 $MempoolCount_bin3 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.33,0.67,0.67,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $BlockSize_bin0 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.33,0.73,1.0,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $HashRate_bin9 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.33,0.67,0.67,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $MempoolCount_bin3 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.33,0.67,0.67,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $MempoolSize_bin3 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.42,0.7,0.71,and(or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $TransactionPerDay_bin1 $TransactionVolume_USD_bin0) !$GTrends_bin1) 
+1.0,0.88,0.63,0.33,0.73,1.0,and(or(and(or($BlockSize_bin0 $TransactionPerDay_bin5) $TransactionVolume_USD_bin1) and($TransactionPerDay_bin7 !$TransactionVolume_USD_bin4) $TransactionVolume_USD_bin0) !$GTrends_bin1) 

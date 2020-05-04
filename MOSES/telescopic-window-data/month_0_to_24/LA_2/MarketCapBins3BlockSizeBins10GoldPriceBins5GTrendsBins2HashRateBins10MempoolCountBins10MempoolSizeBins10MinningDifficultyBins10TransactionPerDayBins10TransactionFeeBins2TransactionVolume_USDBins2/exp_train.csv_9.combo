@@ -1,0 +1,1 @@
+and(or($TransactionPerDay_bin8 $TransactionVolume_USD_bin0) !$HashRate_bin7 !$TransactionPerDay_bin1) 

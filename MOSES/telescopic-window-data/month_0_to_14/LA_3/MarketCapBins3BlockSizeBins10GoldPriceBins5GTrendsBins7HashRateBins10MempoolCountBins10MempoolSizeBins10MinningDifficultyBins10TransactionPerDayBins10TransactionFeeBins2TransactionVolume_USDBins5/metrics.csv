@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.67,0.85,1.0,0.5,0.37,0.37,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) !$GoldPrice_bin1) $MarketCap_bin0) 
+0.67,0.85,1.0,0.43,0.47,0.43,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) $GoldPrice_bin2) $MarketCap_bin0) 
+0.67,0.85,1.0,0.5,0.47,0.44,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) $GTrends_bin2) $MarketCap_bin0) 
+0.75,0.88,1.0,0.5,0.33,0.35,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) !$GTrends_bin5) $MarketCap_bin0) 
+0.75,0.88,1.0,0.5,0.3,0.33,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) !$HashRate_bin1) $MarketCap_bin0) 
+0.67,0.85,1.0,0.43,0.5,0.46,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) $HashRate_bin2) $MarketCap_bin0) 
+0.75,0.88,1.0,0.5,0.3,0.33,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) !$MempoolCount_bin6) $MarketCap_bin0) 
+0.67,0.85,1.0,0.43,0.47,0.43,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) $MempoolCount_bin7) $MarketCap_bin0) 
+0.75,0.88,1.0,0.5,0.3,0.33,or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) !$MempoolSize_bin6) $MarketCap_bin0) 
+0.75,0.88,1.0,0.5,0.33,0.35,and(or(and(or(and($BlockSize_bin8 $MinningDifficulty_bin3) !$GoldPrice_bin4) or($BlockSize_bin8 $TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4)) $MarketCap_bin0) !$HashRate_bin1) 

@@ -1,0 +1,1 @@
+or(and($TransactionPerDay_bin5 $TransactionVolume_USD_bin1) $BlockSize_bin7 $HashRate_bin9) 

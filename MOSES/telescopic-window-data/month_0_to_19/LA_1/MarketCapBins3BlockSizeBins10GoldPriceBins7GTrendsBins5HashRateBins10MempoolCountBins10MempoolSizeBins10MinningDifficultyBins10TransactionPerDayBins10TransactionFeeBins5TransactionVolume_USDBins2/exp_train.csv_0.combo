@@ -1,0 +1,1 @@
+and(or(!$MarketCap_bin0 $TransactionFee_bin0) !$GoldPrice_bin6 !$TransactionFee_bin4) 

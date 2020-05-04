@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.8,0.91,1.0,0.25,0.63,0.29,or(and($GoldPrice_bin3 $MempoolCount_bin4) and(!$MempoolCount_bin2 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin5) 
+0.8,0.91,1.0,0.25,0.63,0.29,or(and($GoldPrice_bin3 $MempoolCount_bin4) and(!$MempoolSize_bin2 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin5) 
+0.8,0.91,1.0,0.38,0.63,0.33,or(and(!$MempoolCount_bin2 $TransactionVolume_USD_bin2) and($MempoolSize_bin4 !$TransactionPerDay_bin5) $TransactionVolume_USD_bin5) 
+0.8,0.91,1.0,0.38,0.63,0.33,or(and(!$MempoolSize_bin2 $TransactionVolume_USD_bin2) and($MempoolSize_bin4 !$TransactionPerDay_bin5) $TransactionVolume_USD_bin5) 
+0.8,0.91,1.0,0.13,0.57,0.14,and(or(and($GoldPrice_bin3 $MempoolCount_bin4) $TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$GoldPrice_bin4 !$TransactionVolume_USD_bin3) 
+0.8,0.91,1.0,0.25,0.63,0.29,and(or(and($GoldPrice_bin3 $MempoolCount_bin4) $TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin2 !$TransactionVolume_USD_bin3) 
+0.8,0.91,1.0,0.38,0.63,0.33,or(and(!$MempoolCount_bin2 $TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3) and($MempoolSize_bin4 !$TransactionPerDay_bin5) $TransactionVolume_USD_bin5) 
+0.8,0.91,1.0,0.38,0.63,0.33,or(and(!$MempoolSize_bin2 $TransactionVolume_USD_bin2 !$TransactionVolume_USD_bin3) and($MempoolSize_bin4 !$TransactionPerDay_bin5) $TransactionVolume_USD_bin5) 
+0.8,0.91,1.0,0.25,0.63,0.29,and(or(and($GoldPrice_bin3 $MempoolCount_bin4) and(!$MempoolCount_bin2 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin5) !$TransactionVolume_USD_bin3) 
+0.8,0.91,1.0,0.25,0.63,0.29,and(or(and($GoldPrice_bin3 $MempoolCount_bin4) and(!$MempoolSize_bin2 $TransactionVolume_USD_bin2) $TransactionVolume_USD_bin5) !$TransactionVolume_USD_bin3) 

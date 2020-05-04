@@ -1,0 +1,1 @@
+and(or(!$MinningDifficulty_bin7 $TransactionFee_bin0 !$TransactionFee_bin1) !$GTrends_bin2 !$HashRate_bin6 !$TransactionPerDay_bin0) 

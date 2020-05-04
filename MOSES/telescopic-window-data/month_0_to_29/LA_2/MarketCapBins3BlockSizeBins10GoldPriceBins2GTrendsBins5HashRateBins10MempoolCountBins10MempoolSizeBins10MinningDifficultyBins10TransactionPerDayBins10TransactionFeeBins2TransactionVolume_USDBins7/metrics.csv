@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.57,0.78,1.0,0.27,0.63,1.0,and(or($GTrends_bin3 !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(!$GTrends_bin4 !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(!$MinningDifficulty_bin0 !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(and(!$MarketCap_bin2 $GTrends_bin3) !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(and(!$MarketCap_bin2 !$GTrends_bin4) !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(and(!$MarketCap_bin2 !$MempoolCount_bin2) !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(and(!$MarketCap_bin2 !$MempoolSize_bin2) !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolCount_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(and(!$MarketCap_bin2 !$MempoolSize_bin2) !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.57,0.78,1.0,0.27,0.63,1.0,and(or(and(!$MarketCap_bin2 !$MinningDifficulty_bin0) !$TransactionPerDay_bin7) or($TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$MempoolSize_bin3 !$TransactionVolume_USD_bin0) 
+0.86,0.89,0.92,0.6,0.73,0.82,and(or($MarketCap_bin0 $TransactionVolume_USD_bin2 $TransactionVolume_USD_bin5) !$TransactionPerDay_bin7) 

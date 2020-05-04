@@ -1,0 +1,10 @@
+1 or($TransactionPerDay_bin2 !$TransactionFee_bin0) 
+0.928571462631225586 !$TransactionVolume_USD_bin0 
+0.9375 or($TransactionPerDay_bin2 !$TransactionVolume_USD_bin0) 
+0.928571462631225586 or(!$TransactionVolume_USD_bin0 $TransactionVolume_USD_bin4) 
+0.928571462631225586 or(!$TransactionVolume_USD_bin0 $TransactionVolume_USD_bin6) 
+0.916666686534881592 and(!$TransactionPerDay_bin5 !$TransactionVolume_USD_bin0) 
+0.875 $TransactionVolume_USD_bin1 
+0.866666674613952637 !$TransactionVolume_USD_bin1 
+0.882352948188781738 or($TransactionFee_bin1 !$TransactionVolume_USD_bin1) 
+0.875 or($TransactionVolume_USD_bin1 $TransactionVolume_USD_bin5) 

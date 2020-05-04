@@ -1,0 +1,1 @@
+and(or($TransactionPerDay_bin7 !$TransactionVolume_USD_bin0) !$TransactionFee_bin0) 

@@ -1,0 +1,10 @@
+1 !$MempoolCount_bin0 
+1 and(!$MempoolCount_bin0 !$TransactionVolume_USD_bin3) 
+1 or($HashRate_bin8 !$MempoolCount_bin0) 
+1 or(!$MempoolCount_bin0 $TransactionVolume_USD_bin2) 
+1 or(!$MempoolCount_bin0 $TransactionVolume_USD_bin4) 
+0.900000035762786865 !$TransactionVolume_USD_bin0 
+0.888888895511627197 $TransactionVolume_USD_bin1 
+0.904689788818359375 or(!$TransactionFee_bin0 $TransactionVolume_USD_bin2) 
+0.900000035762786865 and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin3) 
+0.900000035762786865 and(!$TransactionVolume_USD_bin0 !$TransactionVolume_USD_bin4) 

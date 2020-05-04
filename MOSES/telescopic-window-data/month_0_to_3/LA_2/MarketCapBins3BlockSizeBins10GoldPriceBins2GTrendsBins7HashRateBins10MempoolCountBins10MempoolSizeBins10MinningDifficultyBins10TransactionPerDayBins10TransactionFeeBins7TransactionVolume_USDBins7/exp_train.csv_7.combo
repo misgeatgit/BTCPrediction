@@ -1,0 +1,1 @@
+and(or($TransactionVolume_USD_bin4 $TransactionVolume_USD_bin6) !$TransactionFee_bin0 !$TransactionFee_bin1) 

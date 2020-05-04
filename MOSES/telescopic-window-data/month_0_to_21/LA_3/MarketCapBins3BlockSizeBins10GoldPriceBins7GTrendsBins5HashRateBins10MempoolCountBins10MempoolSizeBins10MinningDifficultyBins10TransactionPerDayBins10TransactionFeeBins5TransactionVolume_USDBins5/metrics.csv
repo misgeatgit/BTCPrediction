@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.89,0.96,1.0,0.05,0.33,0.5,or(and(or(and(or($MarketCap_bin1 $GTrends_bin4) $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4)) or(!$MarketCap_bin2 $GoldPrice_bin5) !$GoldPrice_bin0) and($BlockSize_bin7 $MempoolCount_bin7)) 
+0.89,0.96,1.0,0.05,0.33,0.5,or(and(or(and(or($MarketCap_bin1 $GTrends_bin4) $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4)) or(!$MarketCap_bin2 $GoldPrice_bin5) !$GoldPrice_bin0) and($BlockSize_bin7 $MinningDifficulty_bin1)) 
+0.89,0.96,1.0,0.05,0.33,0.5,or(and(or(and(or($MarketCap_bin1 $GTrends_bin4) $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4)) or(!$MarketCap_bin2 $GoldPrice_bin5) !$GoldPrice_bin0) and(!$MinningDifficulty_bin0 $TransactionVolume_USD_bin4)) 
+0.78,0.92,1.0,0.05,0.3,0.33,and(or(and(!$MarketCap_bin2 $TransactionVolume_USD_bin4) $TransactionFee_bin3) or(!$MarketCap_bin2 $GoldPrice_bin5)) 
+0.78,0.92,1.0,0.05,0.33,0.5,or(and(or($MarketCap_bin1 $GTrends_bin4) $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4)) 
+0.78,0.92,1.0,0.05,0.3,0.33,and(or(and(!$MarketCap_bin2 $TransactionVolume_USD_bin4) $TransactionFee_bin3) or(!$MarketCap_bin2 $GoldPrice_bin5) !$GoldPrice_bin0) 
+0.78,0.92,1.0,0.45,0.53,0.75,and(or(and(!$MarketCap_bin2 $TransactionVolume_USD_bin4) $TransactionFee_bin3 $TransactionVolume_USD_bin0) or(!$MarketCap_bin2 $GoldPrice_bin5)) 
+0.78,0.92,1.0,0.05,0.33,0.5,or(and(or($MarketCap_bin1 $GTrends_bin4) !$GoldPrice_bin0 $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4)) 
+0.78,0.92,1.0,0.45,0.57,0.82,or(and(or($MarketCap_bin1 $GTrends_bin4) $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4) $TransactionVolume_USD_bin0) 
+0.78,0.92,1.0,0.05,0.33,0.5,and(or(and(or($MarketCap_bin1 $GTrends_bin4) $TransactionFee_bin3) and(!$MarketCap_bin2 $TransactionVolume_USD_bin4)) !$GoldPrice_bin0) 

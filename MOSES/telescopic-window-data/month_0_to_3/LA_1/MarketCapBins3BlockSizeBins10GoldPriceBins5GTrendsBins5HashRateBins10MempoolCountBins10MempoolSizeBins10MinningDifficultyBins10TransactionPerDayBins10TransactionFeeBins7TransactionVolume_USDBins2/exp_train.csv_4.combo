@@ -1,0 +1,1 @@
+or(and(or($BlockSize_bin9 $TransactionPerDay_bin3) !$TransactionFee_bin2) and(!$BlockSize_bin8 $HashRate_bin2) and(!$HashRate_bin3 $TransactionFee_bin4) and($HashRate_bin9 !$TransactionFee_bin2)) 

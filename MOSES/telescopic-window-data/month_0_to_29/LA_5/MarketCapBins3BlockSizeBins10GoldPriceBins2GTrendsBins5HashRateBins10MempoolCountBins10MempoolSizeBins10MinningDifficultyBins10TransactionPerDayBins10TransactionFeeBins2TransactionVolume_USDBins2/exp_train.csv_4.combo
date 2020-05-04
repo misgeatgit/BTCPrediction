@@ -1,0 +1,1 @@
+and(or(!$BlockSize_bin9 !$GoldPrice_bin1) or($HashRate_bin6 !$TransactionVolume_USD_bin1) !$TransactionPerDay_bin7) 

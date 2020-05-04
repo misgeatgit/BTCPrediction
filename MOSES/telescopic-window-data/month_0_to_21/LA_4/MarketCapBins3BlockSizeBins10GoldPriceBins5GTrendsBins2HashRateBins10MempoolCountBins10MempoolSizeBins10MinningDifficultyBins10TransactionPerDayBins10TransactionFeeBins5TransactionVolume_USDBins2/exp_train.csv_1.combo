@@ -1,0 +1,1 @@
+or(and(!$GoldPrice_bin0 !$MempoolCount_bin7 $TransactionFee_bin3) and($MempoolSize_bin8 $TransactionPerDay_bin8)) 

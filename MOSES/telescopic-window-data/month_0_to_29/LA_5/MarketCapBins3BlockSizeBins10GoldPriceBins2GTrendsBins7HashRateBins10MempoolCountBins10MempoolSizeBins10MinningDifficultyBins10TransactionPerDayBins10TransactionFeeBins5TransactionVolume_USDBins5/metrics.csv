@@ -1,0 +1,11 @@
+training_recall,training_accuracy,training_precision,test_recall,test_accuracy,test_precision,program
+0.7,0.88,1.0,0.6,0.63,0.46,or(and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.7,0.63,0.47,or(and($MarketCap_bin0 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.7,0.5,0.37,or(and(!$MarketCap_bin2 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.7,0.47,0.35,or(and(!$BlockSize_bin2 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.7,0.47,0.35,or(and(!$HashRate_bin7 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.6,0.43,0.32,or(and(!$MempoolCount_bin6 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.6,0.43,0.32,or(and(!$MempoolSize_bin6 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.6,0.63,0.46,or(and($MinningDifficulty_bin1 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.7,0.47,0.35,or(and(!$MinningDifficulty_bin3 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) and(!$TransactionPerDay_bin4 $TransactionFee_bin0) $TransactionVolume_USD_bin1) 
+0.8,0.92,1.0,0.7,0.57,0.41,or(and(!$TransactionPerDay_bin4 $TransactionFee_bin0) and(!$TransactionPerDay_bin8 !$TransactionFee_bin3 !$TransactionFee_bin4 !$TransactionVolume_USD_bin3) $TransactionVolume_USD_bin1) 
