@@ -1,31 +1,24 @@
 # BTCPrediction
-BTCPrediction contains scripts and data for BTC price prediction. Currently, we are experimenting with [FFX](https://github.com/natekupp/ffx)
-and [MOSES](https://github.com/opencog/moses).
+BTCPrediction contains scripts and data for BTC price prediction. Currently, we are experimenting with [FFX](https://github.com/natekupp/ffx) and [MOSES](https://github.com/opencog/moses).
 
 ## FFX
-The FFX director contains a python script called ruffx.py and FFX style formatted training and test data. The 
-script runs FFX and saves best models in a csv file called ffx_results.csv and the plots for each predictions vs actual
-in png format.
+The FFX directory contains a Python script called `ruffx.py` and FFX-style formatted training and test data. The script runs FFX and saves the best models in a CSV file called `ffx_results.csv`, along with plots for each prediction vs. actual in PNG format.
 
 ## MOSES
-The MOSES directory contains MOSES style training data generation script and analysis script which runs MOSES with a certain parameter
-setup and evaluation and scoring script for evaluating the MOSES generated Model. The MOSES data generator script is called transformer.py
-which requires a certain arguments including a config file. The default one is called experiment-config.json. It is not adviced to run this script
-multiple times with the configuration depicted in experiment-config.json as it may require lots of CPU time to generate all sorts of combination
-of bins. Instead you may run it only once and manually invoke run_anal.sh. 
+The MOSES directory contains a MOSES-style training data generation script, an analysis script that runs MOSES with specific parameter settings, and an evaluation and scoring script to assess the MOSES-generated models. The MOSES data generator script is called `transformer.py`, which requires specific arguments, including a config file. The default one is called `experiment-config.json`. It is not advised to run this script multiple times with the configuration depicted in `experiment-config.json`, as it may require significant CPU time to generate all combinations of bins. Instead, you should run it only once and manually invoke `run_anal.sh`.
 
+After manually tuning important parameters, I settled on using the following settings for the entire experiment:
 
-After manually tuning important parameter, I fixated on using the following settings for the entire experiment.
 ```sh
-moses -H pre -q 0.3 -w 0.8  -u $OUT -W1  -i $train_file 
+moses -H pre -q 0.3 -w 0.8  -u $OUT -W1  -i $train_file \
 				-m 30000 \
 				--fs-score pre \
 				--enable-fs=1 --fs-target-size=12 --fs-algo simple \
-				--complexity-ratio=50 \
+				--complexity-ratio=50
 ```
 
+- For the binarization, I used the following configuration to generate 243 different binarizations:
 
-- For the binarization I used the following configuration to generate 243 different binarizations.
 ```js
 {
         "inputFeatures":[
@@ -46,15 +39,10 @@ moses -H pre -q 0.3 -w 0.8  -u $OUT -W1  -i $train_file
 	"LA_days": [2]
 }
 ```
-the bins key refer to the list of bins experimented with.
+The `bins` key refers to the list of bins experimented with.
 
-- Using the MOSES data and parameter settings from the above two steps, I used ```run_anal.sh``` to run moses. The training and test size is fixed to 839,91 respectively. This data corresponds to 2016-2018 inclusively. The remaining data which accounts for 2019-2020 is kept as a virgin data for evaluating performance of the best models later.
+- Using the MOSES data and parameter settings from the above two steps, I used `run_anal.sh` to run MOSES. The training and test sizes are fixed to 839 and 91, respectively. This data corresponds to 2016-2018 inclusively. The remaining data, which accounts for 2019-2020, is kept as unseen holdout data for evaluating the performance of the best models later.
 
-- Following the above MOSES runs, the top N MOSES models based on training precision and accuracy are picked and stored in files which are found directly under ```LargeExperiment/LA_*/``` directories (LA referes to the number of look ahead days). ```rank_results.py``` does exactly this job; taking root directory of the experiment and N value as arguments and saves ```top_N_prec_metrics.csv``` and ```top_N_acc_metrics.csv``` files under each ```LargeExperiment/LA_*/``` directories.  
+- Following the above MOSES runs, the top `N` MOSES models based on training precision and accuracy are selected and stored in files found directly under the `LargeExperiment/LA_*/` directories (LA refers to the number of look-ahead days). The `rank_results.py` script does exactly this job; it takes the root directory of the experiment and the `N` value as arguments, and saves the `top_N_prec_metrics.csv` and `top_N_acc_metrics.csv` files under each `LargeExperiment/LA_*/` directory.  
 
-- ```vote.py``` does simple voting by ensembling the top N models. It takes the root directory where ```top_N_acc_metrics.csv``` and ```top_N_prec_metrics.csv``` are found, N, and the thhreshold value for voting ((0,1]) as arguments to perform voting. It also valuates performance and accuracy on training and test inputs with the ensemble model and saves the result in ```voting_results.csv``` file.   
-
-
-
-
-
+- `vote.py` does simple voting by ensembling the top `N` models. It takes the root directory (where `top_N_acc_metrics.csv` and `top_N_prec_metrics.csv` are found), `N`, and the threshold value for voting `(0,1]` as arguments to perform voting. It also evaluates performance and accuracy on training and test inputs with the ensemble model and saves the results in the `voting_results.csv` file.
